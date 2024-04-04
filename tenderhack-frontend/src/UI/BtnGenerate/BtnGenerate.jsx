@@ -3,10 +3,15 @@ import cl from './BtnGenerate.module.css'
 
 import Server from '../../api/Server'
 
-function BtnGenerate({colorText, children, nameProduct}) {
+function BtnGenerate({colorText, children, nameProduct, setCategory}) {
+
+  const sendDataToServer = async () => {
+    const response = await Server.sendDataToServer({nameItem: nameProduct})
+    setCategory(response.nameItem)
+  }
 
   return (
-    <button disabled={!nameProduct || nameProduct.length === 0} onClick={() => Server.sendDataToServer(nameProduct)} className={cl.btnGenerate} style={{color: colorText}}>{children}</button>
+    <button disabled={!nameProduct || nameProduct.length === 0} onClick={() => sendDataToServer()} className={cl.btnGenerate} style={{color: colorText}}>{children}</button>
   )
 }
 
