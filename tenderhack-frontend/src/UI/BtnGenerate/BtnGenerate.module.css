@@ -1,0 +1,13 @@
+.btnGenerate{
+    border: 3px solid #CD1F15;
+    border-radius: 9px;
+    width: 147px;
+    height: 46px;
+    font-size: 17px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnGenerate:disabled{
+    cursor:auto;
+}
