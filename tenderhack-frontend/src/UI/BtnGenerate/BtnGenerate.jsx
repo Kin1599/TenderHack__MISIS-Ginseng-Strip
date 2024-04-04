@@ -1,12 +1,12 @@
 import React from 'react'
 import cl from './BtnGenerate.module.css'
 
-import SendServer from '../../api/SendServer'
+import Server from '../../api/Server'
 
 function BtnGenerate({colorText, children, nameProduct}) {
 
   return (
-    <button disabled={!nameProduct || nameProduct.length === 0} onClick={() => SendServer.sendDataToServer(nameProduct)} className={cl.btnGenerate} style={{color: colorText}}>{children}</button>
+    <button disabled={!nameProduct || nameProduct.length === 0} onClick={() => Server.sendDataToServer(nameProduct)} className={cl.btnGenerate} style={{color: colorText}}>{children}</button>
   )
 }
 
