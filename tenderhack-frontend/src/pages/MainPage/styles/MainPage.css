@@ -1,0 +1,14 @@
+.format{
+    margin: 15px 0 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+.format__text{
+    color: #787878;
+}
+
+.form__btn{
+    margin: 35px 0 0 0;
+}

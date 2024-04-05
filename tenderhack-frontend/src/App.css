@@ -18,3 +18,13 @@ h1,h2, h3, h4, h5, h6{font-style: inherit; font-weight: 400;}
 body{
     font-family: "Inter";
 }
+
+._container{
+  width: 952px;
+  display: block;
+  margin: 0 auto;
+}
+
+.App{
+  margin: 59px;
+}
