@@ -1,11 +1,11 @@
 .btnGenerate{
-    border: 3px solid #CD1F15;
     border-radius: 9px;
-    width: 147px;
-    height: 46px;
-    font-size: 17px;
-    background-color: transparent;
+    width: 214px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #224780;
     cursor: pointer;
+    color: #fff;
 }
 
 .btnGenerate:disabled{
