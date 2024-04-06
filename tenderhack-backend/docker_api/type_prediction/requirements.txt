@@ -1,0 +1,6 @@
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+pandas==2.0.3
+transformers==4.38.2
+catboost==1.2.3
