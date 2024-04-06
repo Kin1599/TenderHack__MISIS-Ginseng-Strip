@@ -1,0 +1,66 @@
+.drop-area__title{
+    margin: 0 0 10px 0;
+    color: #787878;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.drop-area{
+    width: 269px;
+    height: 269px;
+    border-radius: 10px;
+    border: 1px dashed #8A8A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-area-add__wrapper{
+    height: 269px;
+    width: 269px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-area__add{
+    width: 62px;
+    height: 62px;
+}
+
+.uploadedFile{
+    width: 269px;
+    height: 269px;
+    border-radius: 10px;
+    border: 1px solid #8A8A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.uploadedImg, .uploadedImgContainer{
+    width: inherit;
+    height: inherit;
+}
+
+.uploadedFile__delete{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.uploadedFiles-sliderBtns__prev, .uploadedFiles-sliderBtns__next{
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
+.newFile__add{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+

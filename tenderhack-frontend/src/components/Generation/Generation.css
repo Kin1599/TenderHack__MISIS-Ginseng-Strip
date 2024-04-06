@@ -1,0 +1,15 @@
+.description{
+    background-color: #EFF5FF;
+    border-radius: 7px;
+    height: 221px;
+    resize: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 21px 20px;
+    font-size: 17px;
+}
+
+.description:focus{
+    background-color: #E1EDFF;
+}

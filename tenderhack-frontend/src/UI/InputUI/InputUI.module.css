@@ -1,7 +1,19 @@
 .input{
     border: 1px solid #787878;
-    font-size: 17px;
+    font-size: 16px;
     border-radius: 5px;
     height: 46px;
-    padding-left: 25px;
+    overflow: auto hidden;
+    white-space: nowrap;
+    resize: none;
+    padding: 10px 0 0 25px;
+}
+
+.input::placeholder{
+    color: #B7B7B7;
+}
+
+.input:focus{
+    border: 1px solid #4B4B4B;
+    outline: none;
 }

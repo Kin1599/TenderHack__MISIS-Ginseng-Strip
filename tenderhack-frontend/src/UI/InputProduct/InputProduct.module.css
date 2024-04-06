@@ -1,0 +1,21 @@
+.inputProduct__title{
+    font-size: 17px;
+    font-weight: 600;
+    color: #787878;
+}
+
+.inputProduct{
+    background-color: #EFF5FF;
+    border-radius: 7px;
+    height: 40px;
+    width: 604px;
+    border: none;
+    margin: 8px 0 0 0;
+    padding: 0 0 0 25px ;
+    font-size: 17px;
+}
+
+.inputProduct:focus{
+    background-color: #E1EDFF;
+    outline: none;
+}

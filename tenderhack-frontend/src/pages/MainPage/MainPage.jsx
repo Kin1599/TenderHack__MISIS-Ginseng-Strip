@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
-import InputUI from '../../UI/InputUI/InputUI';
-import BtnGenerate from '../../UI/BtnGenerate/BtnGenerate';
-import question from "../../assets/question.svg"
 import './styles/MainPage.css'
-
+import InputNameForm from '../../modules/InputNameForm/InputNameForm';
+import ProductForm from '../../modules/ProductForm/ProductForm';
+import Description from '../../components/Generation/Generation';
 
 function MainPage() {
 
@@ -12,16 +11,9 @@ function MainPage() {
 
   return (
     <div className="_container">
-        <div className='form '>
-            <InputUI width="100%" placeHolder="Введите наименование товара" setNameProduct={setNameProduct}/>
-            <div className='format'>
-                <p className='format__text'>Формат ввода</p>
-                <img src={question} alt="question" className='format__icon'/>
-            </div>
-            <div className='form__btn'>
-              <BtnGenerate>Автозаполнение</BtnGenerate>
-            </div>
-        </div>
+        <InputNameForm setNameProduct={setNameProduct}/>
+        <ProductForm/>
+        <Description/>
         <h3>{category}</h3>
     </div>
   )
