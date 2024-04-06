@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GeneralInformation from '../../modules/GeneralInformation/GeneralInformation';
+import GeneralInformation from '../../components/GeneralInformation/GeneralInformation';
 
 
 function ProductForm() {

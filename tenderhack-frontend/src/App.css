@@ -40,6 +40,7 @@ body{
 .line{
   height: 5px;
   background-color: #EAEAEA;
+  margin-top: 32px;
 }
 
 .gray-text__title{

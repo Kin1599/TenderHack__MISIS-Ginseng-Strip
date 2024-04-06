@@ -1,0 +1,11 @@
+.footer__icons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    padding: 0 47px 43px 0;
+}
+
+.footer__icons img{
+    width: 45px;
+    height: 55px;
+}
