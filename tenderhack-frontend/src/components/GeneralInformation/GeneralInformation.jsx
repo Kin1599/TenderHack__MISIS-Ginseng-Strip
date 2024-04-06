@@ -23,11 +23,11 @@ function GeneralInformation({uploaded}) {
                 </div>
               </div>
               <div className='general-information__items'>
-                  <InputProduct title="Вид продукции"/>
-                  <InputProduct title="Наименование"/>
-                  <InputProduct title="Модель"/>
-                  <InputProduct title="Производитель"/>
-                  <InputProduct title="Страна происхождения"/>
+                  <InputProduct title="Вид продукции" important={true}/>
+                  <InputProduct title="Наименование" important={true}/>
+                  <InputProduct title="Модель" important={true}/>
+                  <InputProduct title="Производитель" important={true}/>
+                  <InputProduct title="Страна происхождения" important={true}/>
                   <div className='line'/>
               </div>
             </div>            

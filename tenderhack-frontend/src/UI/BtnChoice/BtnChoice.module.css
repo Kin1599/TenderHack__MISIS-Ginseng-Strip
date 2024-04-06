@@ -2,6 +2,7 @@
     width: 219px;
     text-align: center;
     padding-bottom: 14px;
+    height: inherit;
 }
 
 .btnChoice__title{

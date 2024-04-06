@@ -27,6 +27,7 @@ body{
 
 .App{
   margin: 59px;
+  padding-top: 73px;
 }
 
 .text-title{
@@ -47,4 +48,9 @@ body{
   font-size: 17px;
   font-weight: 600;
   color: #787878;
+}
+
+.important::after{
+  content: '*';
+  color: #CD1F15;
 }

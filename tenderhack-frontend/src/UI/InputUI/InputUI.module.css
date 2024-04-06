@@ -1,12 +1,11 @@
 .input{
     border: 1px solid #787878;
-    font-size: 16px;
+    font-size: 17px;
     border-radius: 5px;
-    height: 46px;
-    overflow: auto hidden;
-    white-space: nowrap;
+    height: auto;
+    overflow-y: hidden;
     resize: none;
-    padding: 10px 0 0 25px;
+    padding: 12px 0 0 25px;
 }
 
 .input::placeholder{
@@ -16,4 +15,9 @@
 .input:focus{
     border: 1px solid #4B4B4B;
     outline: none;
+}
+
+.textarea-container {
+    display: flex;
+    flex-direction: column;
 }

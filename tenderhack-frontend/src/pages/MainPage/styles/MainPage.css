@@ -36,3 +36,12 @@
 .choices__characteristics > *:not(:last-child){
     margin-bottom: 9px;
 }
+
+.navigation__btns{
+    position: fixed;
+    top: 134px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}

@@ -10,6 +10,7 @@ import ChoicePreview from '../../components/ChoicePreview/ChoicePreview';
 import CharacteristicItem from '../../components/CharacteristicItem/CharacteristicItem';
 import CharacteristicsList from '../../modules/CharacteristicsList/CharacteristicsList';
 import DescriptionItem from '../../components/DescriptionItem/DescriptionItem';
+import BtnNavigation from '../../UI/BtnNavigation/BtnNavigation';
 
 function MainPage() {
 
@@ -37,9 +38,16 @@ function MainPage() {
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [activeBtn, setActiveBtn] = useState(2);
     const [descriptionValue, setDescriptionValue] = useState('');
+    const [activeBtnNavigation, setActiveBtnNavigation] = useState(1);
+
 
   return (
     <div className="_container">
+      <div className='navigation__btns'>
+        <BtnNavigation href="#general" active={activeBtnNavigation === 1} onClick={() => setActiveBtnNavigation(1)}>Общие сведения</BtnNavigation>
+        <BtnNavigation href="#description" active={activeBtnNavigation === 2} onClick={() => setActiveBtnNavigation(2)}>Описание</BtnNavigation>
+        <BtnNavigation href="#characteristics" active={activeBtnNavigation === 3} onClick={() => setActiveBtnNavigation(3)}>Характеристики</BtnNavigation>
+      </div>
         <ModalProduct visible={modal} setVisible={setModal}>
           <div className='main-info__wrapper'>
             <div className='main-info'>
@@ -85,9 +93,15 @@ function MainPage() {
           </div>
         </ModalProduct>
         <InputNameForm setNameProduct={setNameProduct}/>
-        <ProductForm uploaded={{uploadedFiles, setUploadedFiles}}/>
-        <Description description={{descriptionValue, setDescriptionValue}}/>
-        <CharacteristicsList characteristics={characteristics}/>
+        <div id='general'>
+          <ProductForm uploaded={{uploadedFiles, setUploadedFiles}}/>
+        </div>
+        <div id='description'>
+          <Description description={{descriptionValue, setDescriptionValue}}/>
+        </div>
+        <div id='characteristics'>
+          <CharacteristicsList characteristics={characteristics}/>
+        </div>
         <div className='btn' onClick={() => console.log(uploadedFiles)}>
           <BtnPreview onClick={() => setModal(true)}>Предварительный просмотр</BtnPreview>
         </div>

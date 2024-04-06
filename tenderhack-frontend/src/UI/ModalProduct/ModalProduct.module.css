@@ -17,6 +17,12 @@
     min-width: 250px;
     height: 657px;
     overflow-y: auto;
+    scrollbar-width: none; /* Скрыть полосу прокрутки для Firefox */
+    -ms-overflow-style: none;
+}
+
+.modalProductContent::-webkit-scrollbar {
+    display: none; /* Скрыть полосу прокрутки для WebKit (Chrome, Safari) */
 }
 
 .modalProduct.active{

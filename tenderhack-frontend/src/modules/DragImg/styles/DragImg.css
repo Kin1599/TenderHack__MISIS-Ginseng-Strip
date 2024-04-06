@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+.drop-area.addFiles{
+    background-color: #EFF5FF;
+}
+
 .drop-area-add__wrapper{
     height: 269px;
     width: 269px;

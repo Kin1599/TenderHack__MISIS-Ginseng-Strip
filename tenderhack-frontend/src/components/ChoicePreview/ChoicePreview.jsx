@@ -7,9 +7,11 @@ function ChoicePreview({active}) {
   return (
     <div className='choicePreview-wrapper'>
         <div className='choicePreview'>
-             <BtnChoice active={activeBtn === 1} onClick={() => setActiveBtn(1)}>Классификация</BtnChoice>
-             <BtnChoice active={activeBtn === 2} onClick={() => setActiveBtn(2)}>Характеристики</BtnChoice>
-             <BtnChoice active={activeBtn === 3} onClick={() => setActiveBtn(3)}>Описание</BtnChoice>
+            <div className='choiceBtns'>
+              <BtnChoice active={activeBtn === 1} onClick={() => setActiveBtn(1)}>Классификация</BtnChoice>
+              <BtnChoice active={activeBtn === 2} onClick={() => setActiveBtn(2)}>Характеристики</BtnChoice>
+              <BtnChoice active={activeBtn === 3} onClick={() => setActiveBtn(3)}>Описание</BtnChoice>
+            </div>
         </div>
     </div>
   )

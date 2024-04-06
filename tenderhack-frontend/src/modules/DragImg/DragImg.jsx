@@ -5,6 +5,7 @@ import addIcon from '../../assets/addIcon.svg'
 import deleteImage from '../../assets/deleteImage.svg'
 import sliderArrow from '../../assets/slider_arrow.svg'
 import addImage from '../../assets/addImage.svg'
+import addFiles from '../../assets/addFiles.svg'
 
 function DragImg({ uploaded }) {
     const [drag, setDrag] = useState(false)
@@ -76,12 +77,14 @@ function DragImg({ uploaded }) {
     <div>
         <div className='drop-area__title'>Изображение товара</div>
         {drag
-            ? <div className='drop-area'
+            ? <div className='drop-area addFiles'
                 onDragStart={e => dragStartHandler(e)}
                 onDragLeave={e => dragLeaveHandler(e)}
                 onDragOver={e => dragStartHandler(e)}
                 onDrop={e => onDropHandler(e)}
-            >Отпустите файлы</div>        
+            >
+                <img src={addFiles} alt="addFiles" />
+            </div>        
             : uploadedFiles.length > 0 
                 ? 
                 <div className='uploadedFile'>

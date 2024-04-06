@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 import sliderArrow from "../../assets/slider_arrow.svg"
+import emptyFile from "../../assets/emptyFile.svg"
 import './ImgSlider.css'
 
 function ImgSlider({uploaded}) {
@@ -44,7 +45,9 @@ function ImgSlider({uploaded}) {
                 )
                 }              
             </div>
-            : <div className='imgFileEmpty'>Здесь могла быть фотография</div>
+            : <div className='imgFileEmpty'>
+                <img src={emptyFile} alt="emptyFile" />
+            </div>
         }
     </div>
   )
