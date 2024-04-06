@@ -1,12 +1,28 @@
 .format{
     margin: 15px 0 0 5px;
     display: flex;
-    align-items: center;
-    gap: 5px
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
 }
 
 .format__text{
     color: #787878;
+}
+
+.format__window{
+    width: 275px;
+    height: 125px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    position: absolute;
+    top: -7px;
+    padding: 11px 10px;
+    color: #787878;
+    position: absolute;
+    left: 300px;
+    background-color: #fff;
 }
 
 .form__btn{
@@ -20,4 +36,27 @@
 
 .uploadedFiles-sliderBtns__prev img{
     transform: rotate(180deg);
+}
+
+.toxicFormat{
+    color: #BD2121;
+    width: 494px;
+    margin: 9px 0 0 5px;
+}
+
+.typoFormat{
+    border: 1px solid #226EE3;
+    border-radius: 5px;
+    height: 88px;
+    margin: -5px 0 0 0;
+}
+
+.typoFormat__title{
+    color: #787878;
+    font-size: 14px;
+    padding: 12px 0 0 25px;
+}
+
+.typoFormat__text{
+    padding: 12px 0 0 25px;
 }

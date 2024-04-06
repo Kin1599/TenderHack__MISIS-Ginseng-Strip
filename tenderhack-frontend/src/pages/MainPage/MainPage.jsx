@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles/MainPage.css'
 import InputNameForm from '../../modules/InputNameForm/InputNameForm';
 import ProductForm from '../../modules/ProductForm/ProductForm';
@@ -18,28 +18,62 @@ function MainPage() {
     const [category, setCategory] = useState('');
     const [modal, setModal] = useState(false)
     const [characteristics, setCharacteristics] = useState([
-      {'title': 'Длина', 'value': '30 см'},
-      {'title': 'Ширина', 'value': '30 см'},
-      {'title': 'Материал', 'value': 'железо'},
-      {'title': 'Длина', 'value': '30 см'},
-      {'title': 'Ширина', 'value': '30 см'},
-      {'title': 'Материал', 'value': 'железо'},
-      {'title': 'Длина', 'value': '30 см'},
-      {'title': 'Ширина', 'value': '30 см'},
-      {'title': 'Материал', 'value': 'железо'},
-      {'title': 'Длина', 'value': '30 см'},
-      {'title': 'Ширина', 'value': '30 см'},
-      {'title': 'Материал', 'value': 'железо'},
+      {'id': 0, 'title': 'Длина', 'value': '30', 'unit': 'см'},
+      {'id': 1, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
+      {'id': 2, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
+      {'id': 3, 'title': 'Длина', 'value': '30', 'unit': 'см'},
+      {'id': 4, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
+      {'id': 5, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
+      {'id': 6, 'title': 'Длина', 'value': '30', 'unit': 'см'},
+      {'id': 7, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
+      {'id': 8, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
+      {'id': 9, 'title': 'Длина', 'value': '30', 'unit': 'см'},
+      {'id': 10, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
+      {'id': 11, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
     ])
     const [classifications, setClassifications] = useState([
-      {'title': 'ГОСТ', 'value': '30 см'},
-      {'title': 'Ширина', 'value': '30 см'},
+      {'title': 'Гост', 'value': '30', 'unit': 'см'},
+      {'title': 'Ширина', 'value': '30', 'unit': 'см'},
     ])
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [activeBtn, setActiveBtn] = useState(2);
     const [descriptionValue, setDescriptionValue] = useState('');
     const [activeBtnNavigation, setActiveBtnNavigation] = useState(1);
+    const [isFormat, setIsFormat] = useState('');
 
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
+    const handleScroll = () => {
+      const generalSection = document.getElementById('general');
+      const descriptionSection = document.getElementById('description');
+      const characteristicsSection = document.getElementById('characteristics');
+
+      const scrollPosition = window.scrollY;
+
+      if (
+        scrollPosition >= generalSection.offsetTop &&
+        scrollPosition < descriptionSection.offsetTop
+      ) {
+        setActiveBtnNavigation(1);
+      } else if (
+        scrollPosition >= descriptionSection.offsetTop && 
+        scrollPosition < characteristicsSection.offsetTop
+      ) {
+        setActiveBtnNavigation(2);
+      } else if(scrollPosition >= characteristicsSection.offsetTop){
+        setActiveBtnNavigation(3);
+      }
+    };
+
+    // Функция для обновления характеристик в родительском компоненте
+    const updateCharacteristics = (updatedCharacteristics) => {
+      setCharacteristics(updatedCharacteristics);
+    };
 
   return (
     <div className="_container">
@@ -92,7 +126,7 @@ function MainPage() {
             </div>
           </div>
         </ModalProduct>
-        <InputNameForm setNameProduct={setNameProduct}/>
+        <InputNameForm isFormat={isFormat} setNameProduct={setNameProduct}/>
         <div id='general'>
           <ProductForm uploaded={{uploadedFiles, setUploadedFiles}}/>
         </div>
@@ -100,7 +134,10 @@ function MainPage() {
           <Description description={{descriptionValue, setDescriptionValue}}/>
         </div>
         <div id='characteristics'>
-          <CharacteristicsList characteristics={characteristics}/>
+          <CharacteristicsList 
+          characteristics={characteristics}
+          onUpdateCharacteristics={updateCharacteristics}
+          />
         </div>
         <div className='btn' onClick={() => console.log(uploadedFiles)}>
           <BtnPreview onClick={() => setModal(true)}>Предварительный просмотр</BtnPreview>

@@ -1,7 +1,3 @@
-.general{
-    margin: 20px 0 0 0;
-}
-
 .btn{
     margin: 78px 0 0 0;
 }
@@ -44,4 +40,8 @@
     display: flex;
     flex-direction: column;
     gap: 17px;
+}
+
+#general, #description, #characteristics{
+    margin-top: 20px;
 }

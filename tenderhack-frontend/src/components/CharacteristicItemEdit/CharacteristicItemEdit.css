@@ -8,9 +8,16 @@
 
 .characteristicItemEdit__title{
     font-size: 15px;
+    width: 100px;
 }
 
 .characteristicItemEdit__value{
+    width: 100px;
+    display: flex;
+    gap: 67px;
+}
+
+.characteristicItemEdit-value, .characteristicItemEdit-unit{
     font-size: 15px;
     font-weight: 300;
     color: #6B6B6B;
