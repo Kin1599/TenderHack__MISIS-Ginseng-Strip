@@ -1,0 +1,17 @@
+.characteristicItemEdit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DADADA;
+    padding: 0 0 9px 6px;
+}
+
+.characteristicItemEdit__title{
+    font-size: 15px;
+}
+
+.characteristicItemEdit__value{
+    font-size: 15px;
+    font-weight: 300;
+    color: #6B6B6B;
+}

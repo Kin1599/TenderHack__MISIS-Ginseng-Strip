@@ -1,5 +1,5 @@
 .btnPreview{
-    background-color: #CD1F15;
+    background-color: #C7180E;
     border-radius: 9px;
     height: 52px;
     width: 288px;
@@ -9,4 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btnPreview:hover{
+    background-color: #DA2419;
+}
+
+.btnPreview:disabled{
+    background-color: #CECECE;
 }

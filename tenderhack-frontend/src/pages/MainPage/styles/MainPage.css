@@ -5,3 +5,34 @@
 .btn{
     margin: 78px 0 0 0;
 }
+
+.main-info__wrapper{
+    padding: 60px 114px;
+}
+
+.main-info{
+    display: flex;
+    gap: 122px; 
+}
+
+.main-info__title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-info__model, .main-info__producer{
+    font-size: 15px;
+    font-weight: 300;
+    color: #828282;
+}
+
+.choices{
+    margin: 45px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.choices__characteristics > *:not(:last-child){
+    margin-bottom: 9px;
+}

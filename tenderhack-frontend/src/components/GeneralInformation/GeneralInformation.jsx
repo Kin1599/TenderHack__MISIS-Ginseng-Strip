@@ -6,7 +6,7 @@ import './styles/GeneralInformation.css'
 import '../../App.css'
 import BtnCategory from '../../UI/BtnCategory/BtnCategory';
 
-function GeneralInformation() {
+function GeneralInformation({uploaded}) {
   return (
     <div className='general-information__wrapper'>
         <h2 className='text-title'>Общие сведения</h2>
@@ -23,13 +23,15 @@ function GeneralInformation() {
                 </div>
               </div>
               <div className='general-information__items'>
-                  <InputProduct title="Категория товара"/>
+                  <InputProduct title="Вид продукции"/>
+                  <InputProduct title="Наименование"/>
                   <InputProduct title="Модель"/>
                   <InputProduct title="Производитель"/>
+                  <InputProduct title="Страна происхождения"/>
                   <div className='line'/>
               </div>
             </div>            
-            <DragImg/>
+            <DragImg uploaded={uploaded}/>
         </div>
         
     </div>

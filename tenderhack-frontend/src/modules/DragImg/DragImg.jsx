@@ -6,10 +6,14 @@ import deleteImage from '../../assets/deleteImage.svg'
 import sliderArrow from '../../assets/slider_arrow.svg'
 import addImage from '../../assets/addImage.svg'
 
-function DragImg() {
+function DragImg({ uploaded }) {
     const [drag, setDrag] = useState(false)
-    const [uploadedFiles, setUploadedFiles] = useState([])
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const {uploadedFiles, setUploadedFiles} = uploaded
+    
+    if (!uploaded) {
+        return <div>Loading...</div>;
+    }
 
     function dragStartHandler(e){
         e.preventDefault()
@@ -82,7 +86,10 @@ function DragImg() {
                 ? 
                 <div className='uploadedFile'>
                     <div className='uploadedImgContainer'>
-                        <img src={URL.createObjectURL(uploadedFiles[currentImageIndex])} alt={`Загруженное изображение ${currentImageIndex + 1}`} className='uploadedImg' />
+                        <img 
+                        src={URL.createObjectURL(uploadedFiles[currentImageIndex])} 
+                        alt={`Загруженное изображение ${currentImageIndex + 1}`} 
+                        className='uploadedImg' />
                         <label htmlFor="fileInput">
                             <img src={addImage} alt='addIconImage' className='newFile__add' />
                         </label>

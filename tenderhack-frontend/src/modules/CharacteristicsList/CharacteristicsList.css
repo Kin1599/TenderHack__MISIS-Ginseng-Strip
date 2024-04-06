@@ -1,0 +1,15 @@
+.characteristicList > *:not(:last-child){
+    margin-bottom: 11px;
+}
+
+.characteristicList__add img{
+    width: 29px;
+    height: 29px;
+}
+
+.characteristicList__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 31px 0 24px 0;
+}

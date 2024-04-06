@@ -1,0 +1,10 @@
+.choicePreview{
+    display: flex;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.choicePreview-wrapper{
+    background-color: #E7EEF7;
+    padding: 15px 71px 0 71px;
+}

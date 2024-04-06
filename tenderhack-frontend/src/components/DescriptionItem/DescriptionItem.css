@@ -1,0 +1,12 @@
+.descriptionItem__textArea{
+    width: 100%;
+    height: 147px;
+    border-radius: 7px;
+    border: 1px solid #D7D7D7;
+    resize: none;
+    padding: 20px;
+}
+
+.descriptionItem__textArea:focus{
+    outline: none;
+}

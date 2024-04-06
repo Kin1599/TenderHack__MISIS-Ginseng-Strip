@@ -6,6 +6,8 @@
     left: 0;
     display: none;
     background-color: rgba(0,0,0, 0.5);
+    z-index: 1000;
+    padding-top: 35px;
 }
 
 .modalProductContent{
@@ -13,6 +15,8 @@
     background: white;
     border-radius: 16px;
     min-width: 250px;
+    height: 657px;
+    overflow-y: auto;
 }
 
 .modalProduct.active{

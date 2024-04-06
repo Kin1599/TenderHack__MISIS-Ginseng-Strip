@@ -3,10 +3,10 @@ import React from 'react'
 import GeneralInformation from '../../components/GeneralInformation/GeneralInformation';
 
 
-function ProductForm() {
+function ProductForm({uploaded}) {
   return (
     <div className='general'>
-        <GeneralInformation/>
+        <GeneralInformation uploaded={uploaded}/>
     </div>
   )
 }

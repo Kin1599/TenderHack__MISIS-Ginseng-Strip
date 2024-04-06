@@ -11,3 +11,7 @@
 .btnGenerate:disabled{
     cursor:auto;
 }
+
+.btnGenerate:hover{
+    background-color: #173462;
+}

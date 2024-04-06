@@ -1,0 +1,11 @@
+.btnEdit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #224780;    
+    border-radius: 9px;
+    color: #224780;
+    font-weight: 500;
+    font-size: 17px;
+    height: 36px;
+}

@@ -1,0 +1,38 @@
+.imgFile{
+    width: 247px;
+    height: 247px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.imgFileContainer__img, .imgFileContainer{
+    width: inherit;
+    height: inherit;
+}
+
+.imgFile-sliderBtns__prev, .imgFile-sliderBtns__next{
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
+.imgFile-sliderBtns__prev{
+    transform: rotate(180deg);
+}
+
+.imgFileEmpty{
+    width: 247px;
+    height: 247px;
+    border: 1px dashed #8A8A8A;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
