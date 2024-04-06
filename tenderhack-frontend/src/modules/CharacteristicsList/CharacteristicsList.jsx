@@ -3,11 +3,13 @@ import './CharacteristicsList.css';
 import CharacteristicItemEdit from '../../components/CharacteristicItemEdit/CharacteristicItemEdit';
 import addIcon from '../../assets/addIcon.svg';
 import BtnEdit from '../../UI/BtnEdit/BtnEdit';
+import AddFormCharacteristicItem from '../../components/AddFormCharacteristicItem/AddFormCharacteristicItem';
 
 function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
   const [characteristicList, setCharacteristicList] = useState(characteristics);
   const [isEditing, setIsEditing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [showAddForm, setShowAddForm] = useState(false);
 
   useEffect(() => {
     // Вызов функции обновления, переданной из родительского компонента
@@ -39,6 +41,12 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
     ));
   };
 
+  // Функция добавления новой характеристики
+  const addCharacteristic = (newCharacteristic) => {
+    setCharacteristicList(prevList => [...prevList, newCharacteristic]);
+    setShowAddForm(false); // Скрыть форму после добавления
+  };
+
   return (
     <div>
       <div className='characteristicList__title'>
@@ -62,10 +70,14 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
           />
         )}
 
-        {isEditing && (
+        {isEditing && !showAddForm &&(
           <div className='characteristicList__add'>
-            <img src={addIcon} alt="characteristicList__add" />
+            <img src={addIcon} alt="characteristicList__add" onClick={() => setShowAddForm(true)}/>
           </div>
+        )}
+
+        {showAddForm && (
+          <AddFormCharacteristicItem addCharacteristic={addCharacteristic} />
         )}
         
       </div>

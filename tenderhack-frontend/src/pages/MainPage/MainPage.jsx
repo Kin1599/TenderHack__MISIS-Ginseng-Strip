@@ -39,7 +39,7 @@ function MainPage() {
     const [activeBtn, setActiveBtn] = useState(2);
     const [descriptionValue, setDescriptionValue] = useState('');
     const [activeBtnNavigation, setActiveBtnNavigation] = useState(1);
-    const [isFormat, setIsFormat] = useState('');
+    const [isFormat, setIsFormat] = useState('toxic');
 
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
