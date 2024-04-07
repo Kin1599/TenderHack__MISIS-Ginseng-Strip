@@ -13,8 +13,8 @@ function BtnGenerate({colorText, children, nameProduct, setItem}) {
     setManufacturer(response['manufacturer'])
     const category = await Server.predictCategory(nameProduct);
     setCategory(category)
-    const fields = await Server.getField(category[0]);
-    setFields(fields);
+    const field = await Server.getField(category[0]);
+    setFields(field);
     console.log(response);
     const description = await Server.generate_description(nameProduct)
     setDescriptionValueGenerate(description['text'])

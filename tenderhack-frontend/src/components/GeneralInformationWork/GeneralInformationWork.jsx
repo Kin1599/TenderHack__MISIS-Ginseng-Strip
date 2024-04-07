@@ -7,12 +7,12 @@ import '../../App.css'
 import BtnCategory from '../../UI/BtnCategory/BtnCategory';
 import DropDownList from '../../UI/DropDownList/DropDownList';
 
-function GeneralInformationWork({uploaded, type, setType}) {
+function GeneralInformationWork({type, setType}) {
   return (
     <div className='general-information-work__wrapper'>
         <h2 className='text-title'>Общие сведения</h2>
         <div className='general-information-work'>
-            <div>
+            <div className='general-information__hz'>
               <div className='general-information-work__category'>
                 <div className='general-information-work-category__title gray-text__title'>
                   Категория продукции
@@ -24,13 +24,11 @@ function GeneralInformationWork({uploaded, type, setType}) {
                 </div>
               </div>
               <div className='general-information-work__items'>
-                             
                 <InputProduct title="Вид продукции" important={true}/>
                 <InputProduct title="Классификации ГОСТ/ТУ" important={true}/>
                 <div className='line'/>
               </div>
             </div>            
-            <DragImg uploaded={uploaded}/>
         </div>
         
     </div>

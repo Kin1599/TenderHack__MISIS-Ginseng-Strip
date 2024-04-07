@@ -1,13 +1,11 @@
-.general-information-work{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0 0 0;
-}
-
 .general-information-work__items{
     display: flex;
     flex-direction: column;
     gap: 17px;
+}
+
+.general-information__hz{
+    width: 100%;
 }
 
 .general-information-work-category__categories{
