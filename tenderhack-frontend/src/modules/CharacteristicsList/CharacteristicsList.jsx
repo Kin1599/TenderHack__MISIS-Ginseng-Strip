@@ -6,15 +6,15 @@ import BtnEdit from '../../UI/BtnEdit/BtnEdit';
 import AddFormCharacteristicItem from '../../components/AddFormCharacteristicItem/AddFormCharacteristicItem';
 
 function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
-  const [characteristicList, setCharacteristicList] = useState(characteristics);
+  const [characteristicList, setCharacteristicList] = useState([]);
+
+  useEffect(() => {
+    setCharacteristicList(characteristics);
+  }, [characteristics]);
+
   const [isEditing, setIsEditing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [showAddForm, setShowAddForm] = useState(false);
-
-  useEffect(() => {
-    // Вызов функции обновления, переданной из родительского компонента
-    onUpdateCharacteristics(characteristicList);
-  }, [characteristicList, onUpdateCharacteristics]);
 
   function editing() {
     setIsEditing(true);
@@ -25,26 +25,17 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
     setIsEditing(false);
   }
 
-  // Функция добавления новой характеристики
   const addCharacteristic = (newCharacteristic) => {
-    setCharacteristicList([...characteristicList, newCharacteristic]);
-    setShowAddForm(false); // Скрыть форму после добавления
+    setCharacteristicList(prevCharacteristics => [...prevCharacteristics, newCharacteristic]);
+    setShowAddForm(false);
   };
 
-  // Функция удаления характеристики
   const deleteCharacteristic = (id) => {
-    setCharacteristicList(prevCharacteristics => (
-      prevCharacteristics.filter(characteristic => characteristic.id !== id)
-    ));
+    setCharacteristicList(prevCharacteristics => prevCharacteristics.filter(char => char.id !== id));
   };
 
-  // Функция обновления характеристики
   const updateCharacteristic = (id, updatedCharacteristic) => {
-    setCharacteristicList(prevList => (
-      prevList.map(char =>
-        char.id === id ? updatedCharacteristic : char
-      )
-    ));
+    setCharacteristicList(prevList => prevList.map(char => (char.id === id ? updatedCharacteristic : char)));
   };
 
   return (
@@ -59,9 +50,9 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
 
       <div className='characteristicList'>
         {characteristicList.length > 0 ? (
-          characteristicList.map((characteristic, index) => (
+          characteristicList.map((characteristic) => (
             <CharacteristicItemEdit
-              key={index}
+              key={characteristic.id} // Используем уникальный id в качестве ключа
               characteristic={characteristic}
               isEditing={isEditing}
               setIsEditing={setIsEditing}
@@ -86,7 +77,7 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
 
       </div>
     </div>
-  )
+  );
 }
 
 export default CharacteristicsList;

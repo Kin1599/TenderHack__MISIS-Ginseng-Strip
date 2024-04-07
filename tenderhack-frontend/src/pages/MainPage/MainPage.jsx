@@ -62,9 +62,6 @@ function MainPage() {
       const descriptionSection = document.getElementById('description');
       const characteristicsSection = document.getElementById('characteristics');
 
-      console.log("FIELDS")
-      console.log(characteristics)
-
       const scrollPosition = window.scrollY;
 
       if (
