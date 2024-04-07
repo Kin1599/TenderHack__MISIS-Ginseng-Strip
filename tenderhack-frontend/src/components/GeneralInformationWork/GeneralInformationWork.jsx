@@ -7,7 +7,7 @@ import '../../App.css'
 import BtnCategory from '../../UI/BtnCategory/BtnCategory';
 import DropDownList from '../../UI/DropDownList/DropDownList';
 
-function GeneralInformationWork({uploaded, type}) {
+function GeneralInformationWork({uploaded, type, setType}) {
   return (
     <div className='general-information-work__wrapper'>
         <h2 className='text-title'>Общие сведения</h2>
@@ -18,9 +18,9 @@ function GeneralInformationWork({uploaded, type}) {
                   Категория продукции
                 </div>
                 <div className='general-information-work-category__categories'>
-                  <BtnCategory>Товары</BtnCategory>
-                  <BtnCategory active={type === "Работа"}>Работы</BtnCategory>
-                  <BtnCategory active={type === "Услуга"}>Услуги</BtnCategory>
+                  <BtnCategory onClick={() => setType("Товар")} active={type === "Товар"}>Товары</BtnCategory>
+                  <BtnCategory onClick={() => setType("Работа")}active={type === "Работа"}>Работы</BtnCategory>
+                  <BtnCategory onClick={() => setType("Услуга")}active={type === "Услуга"}>Услуги</BtnCategory>
                 </div>
               </div>
               <div className='general-information-work__items'>

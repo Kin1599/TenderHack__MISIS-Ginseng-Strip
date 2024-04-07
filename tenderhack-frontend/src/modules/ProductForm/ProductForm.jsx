@@ -18,11 +18,12 @@ function ProductForm({uploaded, item, setFields, activeCategory, activeModel, ac
           activeCategory={activeCategory} 
           activeModel={activeModel}
           activeManufacturer={activeManufacturer}
-          setType={setType}/>
+          setType={setType}
+          type={type}/>
         </div>
         :
         <div>
-          <GeneralInformationWork uploaded={uploaded} type={type}/>
+          <GeneralInformationWork uploaded={uploaded} type={type} setType={setType}/>
         </div>
       }
         

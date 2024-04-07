@@ -7,7 +7,7 @@ import DropDownList from '../../UI/DropDownList/DropDownList';
 import './styles/GeneralInformation.css';
 import '../../App.css';
 
-function GeneralInformation({ uploaded, item, activeCategory, activeModel, activeManufacturer, setType }) {
+function GeneralInformation({ uploaded, item, activeCategory, activeModel, activeManufacturer, setType, type }) {
   const { model, manufacturer, category } = item;
   const { activeCategoryIndex, setActiveCategoryIndex } = activeCategory;
   const { activeModelIndex, setActiveModelIndex } = activeModel;
@@ -21,9 +21,9 @@ function GeneralInformation({ uploaded, item, activeCategory, activeModel, activ
           <div className='general-information__category'>
             <div className='general-information-category__title gray-text__title'>Категория продукции</div>
             <div className='general-information-category__categories'>
-              <BtnCategory onClick={() => setType("Товар")} active={true}>Товары</BtnCategory>
-              <BtnCategory onClick={() => setType("Работа")}>Работы</BtnCategory>
-              <BtnCategory onClick={() => setType("Услуга")}>Услуги</BtnCategory>
+              <BtnCategory onClick={() => setType("Товар")} active={type === "Товар"}>Товары</BtnCategory>
+              <BtnCategory onClick={() => setType("Работа")} active={type === "Работа"}>Работы</BtnCategory>
+              <BtnCategory onClick={() => setType("Услуга")} active={type === "Услуга"}>Услуги</BtnCategory>
             </div>
           </div>
           <div className='general-information__items'>
