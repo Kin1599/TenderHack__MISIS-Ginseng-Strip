@@ -1,0 +1,150 @@
+{
+    "layout": [
+        {
+            "component": "tapTags",
+            "params": "{}",
+            "stateId": "tapTags-3269930-default-1",
+            "version": 1,
+            "vertical": "search",
+            "widgetTrackingInfo": "{\"name\":\"search.tapTags\",\"vertical\":\"search\",\"component\":\"tapTags\",\"version\":1,\"id\":3269930,\"revisionId\":3640430,\"index\":1}",
+            "widgetToken": "JZhg0Y1B3smnrA0YFBMppDGUAB7vZBFJNVBx9t2JEArE",
+            "name": "search.tapTags",
+            "id": 3269930,
+            "isTrackingOn": true
+        },
+        {
+            "component": "searchSuggestions",
+            "params": "{}",
+            "stateId": "searchSuggestions-3104215-default-1",
+            "version": 3,
+            "vertical": "catalog",
+            "widgetTrackingInfo": "{\"name\":\"search.suggestions\",\"vertical\":\"catalog\",\"component\":\"searchSuggestions\",\"version\":3,\"originName\":\"search.suggestions\",\"originVertical\":\"search\",\"originComponent\":\"suggestions\",\"originVersion\":1,\"id\":3104215,\"revisionId\":3415356,\"index\":3}",
+            "widgetToken": "k5homQrk8hNDGGo3S4yKOJ3h3gzVqDhOrYxW3IEnx8mw",
+            "name": "search.suggestions",
+            "id": 3104215,
+            "isTrackingOn": true
+        }
+    ],
+    "widgetStates": {
+        "searchSuggestions-3104215-default-1": "{\"title\":\"\",\"items\":[{\"title\":\"кофемашина\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[],\"deeplink\":\"ozon://search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0\",\"image\":\"\",\"note\":\"\",\"meta\":{\"type\":\"history\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{\"click\":{\"actionType\":\"search\",\"key\":\"gpt4V2mqOHy9Y8ZxuqMq6G3IAZnYQjI6jRlLwuqJJ2zm\",\"nested\":[],\"sliceKey\":\"\"}},\"removeTrackingInfo\":{\"click\":{\"actionType\":\"remove\",\"key\":\"pZtpX8v91T9YRDYIokL140T5Vk5rzi8NZwJOs5JnOq1\",\"nested\":[],\"sliceKey\":\"\"}},\"trackingInfo\":{\"search\":{\"actionType\":\"search\",\"key\":\"gpt4V2mqOHy9Y8ZxuqMq6G3IAZnYQjI6jRlLwuqJJ2zm\",\"nested\":[],\"sliceKey\":\"\"},\"view\":{\"actionType\":\"view\",\"key\":\"pZtpX8v91T9YRDYIokL140T5Vk5rzi8NZwJOs5JnOq1\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"pZtpX8v91T9YRDYIokL140T5Vk5rzi8NZwJOs5JnOq1\",\"nested\":[],\"sliceKey\":\"\"},\"remove\":{\"actionType\":\"remove\",\"key\":\"pZtpX8v91T9YRDYIokL140T5Vk5rzi8NZwJOs5JnOq1\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"кофемашина капсульная\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[],\"deeplink\":\"ozon://search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F\",\"image\":\"\",\"note\":\"\",\"meta\":{\"type\":\"suggests\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{\"click\":{\"actionType\":\"search\",\"key\":\"Rlty7LRGjF0xngyghARlLYJcv3zokghDBzBOZs31L5or\",\"nested\":[],\"sliceKey\":\"\"}},\"removeTrackingInfo\":{},\"trackingInfo\":{\"search\":{\"actionType\":\"search\",\"key\":\"Rlty7LRGjF0xngyghARlLYJcv3zokghDBzBOZs31L5or\",\"nested\":[],\"sliceKey\":\"\"},\"view\":{\"actionType\":\"view\",\"key\":\"OgtEqK0Nzhp7GrrJhRglYw1T8mVr4iJM22JDf5JAojo\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"OgtEqK0Nzhp7GrrJhRglYw1T8mVr4iJM22JDf5JAojo\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"кофемашина автоматическая\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[],\"deeplink\":\"ozon://search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F\",\"image\":\"\",\"note\":\"\",\"meta\":{\"type\":\"suggests\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{\"click\":{\"actionType\":\"search\",\"key\":\"83tBnRzXDHgv5ErRTR4Aq99tlqNGymIDz4nW6SBPN7n9\",\"nested\":[],\"sliceKey\":\"\"}},\"removeTrackingInfo\":{},\"trackingInfo\":{\"search\":{\"actionType\":\"search\",\"key\":\"83tBnRzXDHgv5ErRTR4Aq99tlqNGymIDz4nW6SBPN7n9\",\"nested\":[],\"sliceKey\":\"\"},\"view\":{\"actionType\":\"view\",\"key\":\"28t0nwRVPHmzED17tMlojZVUojJ1X6cXx3Pp0FJlkGry\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"28t0nwRVPHmzED17tMlojZVUojJ1X6cXx3Pp0FJlkGry\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"кофемашина рожковая\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[],\"deeplink\":\"ozon://search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D1%80%D0%BE%D0%B6%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F\",\"image\":\"\",\"note\":\"\",\"meta\":{\"type\":\"suggests\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{\"click\":{\"actionType\":\"search\",\"key\":\"Z8tXOND7rUVxjZPKiLRy7pjT2Dz3K6CjR71Ac2jJz94\",\"nested\":[],\"sliceKey\":\"\"}},\"removeTrackingInfo\":{},\"trackingInfo\":{\"search\":{\"actionType\":\"search\",\"key\":\"Z8tXOND7rUVxjZPKiLRy7pjT2Dz3K6CjR71Ac2jJz94\",\"nested\":[],\"sliceKey\":\"\"},\"view\":{\"actionType\":\"view\",\"key\":\"99troBMzLcw54j23CZjEyx6U2vnAMxsp0qKNXTvWXpYW\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"99troBMzLcw54j23CZjEyx6U2vnAMxsp0qKNXTvWXpYW\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D1%80%D0%BE%D0%B6%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"кофемашина зерновая\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[],\"deeplink\":\"ozon://search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D0%B7%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F\",\"image\":\"\",\"note\":\"\",\"meta\":{\"type\":\"suggests\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{\"click\":{\"actionType\":\"search\",\"key\":\"A6tG7WnZLc23744ZfM0m3Qpf2qYmjqhV6D9yBtXgOo7A\",\"nested\":[],\"sliceKey\":\"\"}},\"removeTrackingInfo\":{},\"trackingInfo\":{\"search\":{\"actionType\":\"search\",\"key\":\"A6tG7WnZLc23744ZfM0m3Qpf2qYmjqhV6D9yBtXgOo7A\",\"nested\":[],\"sliceKey\":\"\"},\"view\":{\"actionType\":\"view\",\"key\":\"J8tg0Y1B3sm5O2OxhRlkBRcj5rxWmF775pmOujvDqWz\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"J8tg0Y1B3sm5O2OxhRlkBRcj5rxWmF775pmOujvDqWz\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/search/?from_global=true\\u0026text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0%20%D0%B7%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"Кофемашины\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[{\"text\":\"Ozon fresh\"},{\"text\":\"Другие товары\"},{\"text\":\"Бытовая техника\"},{\"text\":\"Техника для кухни\"},{\"text\":\"Кофемашины и кофеварки\"},{\"text\":\"Кофемашины\"}],\"deeplink\":\"ozon://category/kofemashiny-10533000/\",\"image\":\"https://cdn1.ozone.ru/s3/multimedia-y/6188833102.jpg\",\"note\":\"\",\"meta\":{\"type\":\"category\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{},\"removeTrackingInfo\":{},\"trackingInfo\":{\"view\":{\"actionType\":\"view\",\"key\":\"WPtNlBP6RhErLVXEFk7RVnlfopW8ZZSr9Q7Zpf9ARZ3z\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"WPtNlBP6RhErLVXEFk7RVnlfopW8ZZSr9Q7Zpf9ARZ3z\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/category/kofemashiny-10533000/\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"Кофемашины автоматические и встраиваемые\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[{\"text\":\"Бытовая техника\"},{\"text\":\"Техника для кухни\"},{\"text\":\"Кофеварки и кофемашины\"},{\"text\":\"Кофемашины автоматические и встраиваемые\"}],\"deeplink\":\"ozon://category/kofemashiny-10532/\",\"image\":\"https://cdn1.ozone.ru/multimedia/1021478317.jpg\",\"note\":\"\",\"meta\":{\"type\":\"category\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{},\"removeTrackingInfo\":{},\"trackingInfo\":{\"view\":{\"actionType\":\"view\",\"key\":\"16tLvYk62hom1PZjF98yyk5hQMjkvVHN6VBRXIjJ6mVG\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"16tLvYk62hom1PZjF98yyk5hQMjkvVHN6VBRXIjJ6mVG\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/category/kofemashiny-10532/\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"DeLonghi\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[{\"text\":\"Бренд\"}],\"deeplink\":\"ozon://brand/delonghi-25000575/\",\"image\":\"https://cdn1.ozone.ru/s3/multimedia-s/6737343676.jpg\",\"note\":\"\",\"meta\":{\"type\":\"brand\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{},\"removeTrackingInfo\":{},\"trackingInfo\":{\"view\":{\"actionType\":\"view\",\"key\":\"r2t4Lv1rPH0wjK4ZFw3G2jLspwNjm0UEj1znXCkK8zq9\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"r2t4Lv1rPH0wjK4ZFw3G2jLspwNjm0UEj1znXCkK8zq9\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/brand/delonghi-25000575/\",\"breadcrumbConnectSymbol\":\"\\u003E\"},{\"title\":\"Philips\",\"queryText\":\"кофемашина\",\"breadCrumbs\":[{\"text\":\"Бренд\"}],\"deeplink\":\"ozon://brand/philips-22706003/\",\"image\":\"https://cdn1.ozone.ru/s3/multimedia-7/6737349271.jpg\",\"note\":\"\",\"meta\":{\"type\":\"brand\",\"isPromotedProduct\":false},\"searchTrackingInfo\":{},\"removeTrackingInfo\":{},\"trackingInfo\":{\"view\":{\"actionType\":\"view\",\"key\":\"QktJzW3XMcKON7g7hkYpnW1t39YP9JCqEEx12h20247A\",\"nested\":[],\"sliceKey\":\"\"},\"click\":{\"actionType\":\"click\",\"key\":\"QktJzW3XMcKON7g7hkYpnW1t39YP9JCqEEx12h20247A\",\"nested\":[],\"sliceKey\":\"\"}},\"cellTrackingInfo\":null,\"shouldPrefetch\":false,\"subtitle\":\"\",\"link\":\"/brand/philips-22706003/\",\"breadcrumbConnectSymbol\":\"\\u003E\"}],\"removeHistoryActionName\":\"deleteSearchHistory\",\"abFeatures\":{\"ui-user-input-and-suggest-delta\":\"true\"}}",
+        "tapTags-3269930-default-1": "{ }"
+    },
+    "browser": {
+        "ip": "57.129.1.206",
+        "isDesktop": true,
+        "platform": "desktop",
+        "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36",
+        "prevLocation": "https://www.ozon.ru/category/kofevarki-i-kofemashiny-10530/?category_was_predicted=true&deny_category_prediction=true&from_global=true&text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0",
+        "useSW": true,
+        "webp": true,
+        "device": "desktop",
+        "age": "modern",
+        "cspNonce": "7ffb9ca0-951e-42fe-b14c-3dc8e35491b0",
+        "family": "Yandex Browser",
+        "majorVersion": 24,
+        "cdnImgHostname": "ir.ozone.ru",
+        "cdnVideoHostname": "v.ozone.ru",
+        "cdnOriginalImgHostname": "io.ozone.ru",
+        "cdnStaticHostname": "st.ozone.ru"
+    },
+    "client": {
+        "platform": "desktop",
+        "marketplaceDomain": "ozon.ru"
+    },
+    "layoutTrackingInfo": "{\"layoutId\":1689,\"layoutVersion\":124,\"pageType\":\"search_suggestions\",\"ruleId\":1485,\"deviceType\":\"desktop\",\"platform\":\"site\",\"templateType\":\"desktop\",\"marketplaceId\":1,\"requestId\":\"ceaa0e044e994ca8a4dabcdc3008536c\"}",
+    "location": {
+        "current": {
+            "areaId": 2,
+            "areaType": 4,
+            "countryCode": "RUS",
+            "countryId": 1,
+            "fias": "0c5b2444-70a0-4932-980c-b4dc0d3f02b5",
+            "timeZoneUtcname": "UTC+3",
+            "geoCoordinate": {},
+            "uid": "0c5b2444-70a0-4932-980c-b4dc0d3f02b5"
+        }
+    },
+    "seo": {},
+    "shared": "{\"context\":\"ozon\"}",
+    "segments": [
+        1
+    ],
+    "pageInfo": {
+        "url": "/searchSuggestions/search/?from_global=true&text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0",
+        "layoutId": 1689,
+        "layoutVersion": 124,
+        "pageType": "search_suggestions",
+        "ruleId": 1485,
+        "referer": "https://www.ozon.ru/category/kofevarki-i-kofemashiny-10530/?category_was_predicted=true&deny_category_prediction=true&from_global=true&text=%D0%BA%D0%BE%D1%84%D0%B5%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0",
+        "pageTypeTracking": "search_suggestions"
+    },
+    "trackingPayloads": {
+        "7Lin3kQz4u2068n0izBDl7vfk4rRv4ipWLYDESXylvKw": "{\"layoutId\":1689,\"layoutVersion\":124,\"pageType\":\"search_suggestions\",\"ruleId\":1485,\"deviceType\":\"desktop\",\"platform\":\"site\",\"templateType\":\"desktop\",\"marketplaceId\":1,\"requestId\":\"ceaa0e044e994ca8a4dabcdc3008536c\"}"
+    },
+    "pageToken": "7Lin3kQz4u2068n0izBDl7vfk4rRv4ipWLYDESXylvKw",
+    "serverTiming": [
+        {
+            "duration": 5,
+            "name": "Resolve"
+        },
+        {
+            "duration": 25,
+            "name": "Widgets"
+        },
+        {
+            "duration": 32,
+            "name": "Total"
+        },
+        {
+            "duration": 32,
+            "name": "ComposerTotal"
+        },
+        {
+            "name": "ComposerInternal"
+        }
+    ],
+    "userToken": "71sn3kQz4uy1GB49u4rv39VfLpvy9zSAvLVXAi8KO08J",
+    "experimentsConfig": {
+        "trackLcpElement": true,
+        "prerenderCheckoutSW": true,
+        "trackImagesRum4": true,
+        "prefetchAssetsSW": true,
+        "isCdnFonts": true,
+        "enableTrackerInfoLogs": true,
+        "enableDevtools": true,
+        "gtmDelay2000": true,
+        "alternativeCdnImages": true,
+        "earlyHintsEnabled": true,
+        "disableWidgetTracking": true,
+        "enableSWCaching": true,
+        "allyMode": true,
+        "cpmTrackerEnabled": true,
+        "entrypointPrerenderHome": true,
+        "fingerprinting": true,
+        "s3PublicPath": true,
+        "prerenderCartPageSW": true,
+        "withPerformanceMarks": true,
+        "useEntrypointPageJson": true,
+        "usePreloadImagesPDPGallery": true,
+        "detectHeadlessRum4": true,
+        "disableVersionFallback": true,
+        "mergeUrlLogger": true,
+        "prerenderEnabled": true,
+        "isTrinityEvent": true,
+        "isModern": true,
+        "entrypointCacheControl": true,
+        "newPaginationRum4": true,
+        "enableTrackerLogs": true,
+        "disableProductClickEvent": true,
+        "isRFBS": true,
+        "lowerGalleryImageQuality": true,
+        "enableVersionFallbackLogs": true,
+        "disableSendWidgetViewCE": true,
+        "prerenderHomePageSW": true,
+        "newOrderDone": true,
+        "isStickySearchbar": true,
+        "linkAsyncWidgets": true,
+        "fastDeliveryDeploy": true
+    },
+    "requestID": "ceaa0e044e994ca8a4dabcdc3008536c"
+}
