@@ -43,7 +43,7 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
       <div className='characteristicList__title'>
         <h2 style={{ margin: "0" }} className='text-title'>Характеристики</h2>
         {isEditing
-          ? <BtnEdit width="142px" onClick={saving}>Ок</BtnEdit>
+          ? <BtnEdit width="142px" onClick={saving}>OK</BtnEdit>
           : <BtnEdit width="142px" onClick={editing}>Изменить</BtnEdit>
         }
       </div>
