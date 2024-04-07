@@ -24,7 +24,7 @@ function MainPage() {
     const [activeManufacturerIndex, setActiveManufacturerIndex] = useState(0)
     const [model, setModel] = useState(['']);
     const [activeModelIndex, setActiveModelIndex] = useState(0);
-    const [fields, setFields] = useState([
+    const [characteristics, setCharacteristics] = useState([
       {'id': 0, 'title': 'Длина', 'value': '30', 'unit': 'см'},
       {'id': 1, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
       {'id': 2, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
@@ -51,7 +51,7 @@ function MainPage() {
 
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
-      console.log({fields})
+      console.log({characteristics})
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
@@ -81,7 +81,7 @@ function MainPage() {
 
     // Функция для обновления характеристик в родительском компоненте
     const updateCharacteristics = (updatedCharacteristics) => {
-      setFields(updatedCharacteristics);
+      setCharacteristics(updatedCharacteristics);
     };
 
     const generateDescriptionAndUpdateState = async (item) => {
@@ -129,10 +129,10 @@ function MainPage() {
               )}
               {activeBtn === 2 && (
                 <div className='choices__characteristics'>
-                {Array.isArray(fields) ? (
-                  fields.map((characteristic, index) => (
+                {Array.isArray(characteristics) ? (
+                  characteristics.map((characteristic, index) => (
                     <div key={index}>
-                      <CharacteristicItem characteristic={characteristic} />
+                      <CharacteristicItem characteristic={characteristics} />
                     </div>
                   ))
                 ) : (
@@ -153,7 +153,7 @@ function MainPage() {
         setIsFormat={setIsFormat}
         setNameProduct={setNameProduct} 
         nameProduct={nameProduct}
-        setItem={{setModel, setManufacturer, setType, setCategory, setFields, setDescriptionValueGenerate}}
+        setItem={{setModel, setManufacturer, setType, setCategory, setCharacteristics, setDescriptionValueGenerate}}
         item = {{model, manufacturer, type, category}}
         attributes = {{model, manufacturer}}
         />
@@ -175,7 +175,7 @@ function MainPage() {
         </div>
         <div id='characteristics'>
           <CharacteristicsList 
-          characteristics={fields}
+          characteristics={characteristics}
           onUpdateCharacteristics={updateCharacteristics}
           />
         </div>
