@@ -54,7 +54,7 @@ export default class SendServer {
     static async getField(category) {
         const data = { "text": category }
         try {
-            const response = await axios.post("http://localhost:8008/get_fields",data);
+            const response = await axios.post("http://localhost:8008/fill_characteristics",data);
             console.log(response.data);
             return response.data;
         } catch (error) {
