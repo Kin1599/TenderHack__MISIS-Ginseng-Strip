@@ -58,7 +58,8 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
       </div>  
 
       <div className='characteristicList'>
-        {characteristicList.map((characteristic, index) =>
+      {Array.isArray(characteristicList) && characteristicList.length > 0 ? (
+        characteristicList.map((characteristic, index) => (
           <CharacteristicItemEdit
             key={index}
             characteristic={characteristic}
@@ -68,7 +69,10 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
             deleteCharacteristic={deleteCharacteristic} // Передача функции удаления
             isSaving={isSaving}
           />
-        )}
+        ))
+      ) : (
+        <div>Список характеристик пуст</div>
+      )}
 
         {isEditing && !showAddForm &&(
           <div className='characteristicList__add'>
