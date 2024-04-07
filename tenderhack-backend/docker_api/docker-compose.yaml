@@ -1,21 +1,65 @@
 services:
-  type_prediction_model:
-    build:
-      context: type_prediction
-#      args:
-#        - FOLDER=type_prediction_models
-      dockerfile: ../Dockerfile
-    ports:
-      - "8000:80"
-    # volumes:
-    # - ./type_prediction_models:/type_prediction_models
   preprocessing_model:
     build:
       context: preprocessing
 #      args:
 #        - FOLDER=type_prediction_models
-      dockerfile: ../Dockerfile
+      dockerfile: ../Dockerfile_torch
     ports:
       - "8001:80"
 #    volumes:
 #    - ./type_prediction_models:/type_prediction_models
+  type_prediction_model:
+    build:
+      context: type_prediction
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_torch
+    ports:
+      - "8000:80"
+    volumes:
+    - ./type_prediction_models:/type_prediction_models
+  checkname_model:
+    build:
+      context: check_name
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_clickhouse
+    ports:
+      - "8002:80"
+    volumes:
+    - /home/rdinit/check_names_model:/models
+  category_pred_model:
+    build:
+      context: category_prediction
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_torch
+    ports:
+      - "8003:80"
+#    volumes:
+#    - /home/rdinit/check_names_model:/models
+  characteristics_fields:
+    build:
+      context: characteristics_fields
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_clickhouse
+    ports:
+      - "8005:80"
+  get_codes:
+    build:
+      context: get_codes
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_clickhouse
+    ports:
+      - "8006:80"
+  api:
+    build:
+      context: api
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: Dockerfile_api
+    ports:
+     - "8008:80"

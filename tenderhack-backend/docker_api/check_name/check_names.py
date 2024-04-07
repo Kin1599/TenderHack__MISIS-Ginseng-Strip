@@ -20,18 +20,19 @@ def remove_quotes_and_special_chars(text):
 models = []
 with open('models/all_models.txt', 'r') as f:
     for line in f:
-        models.append(line.strip())
+        models.append(line.strip().lower())
 
 manufacturers = []
 with open('../models/all_manufacturers.txt', 'r') as f:
     for line in f:
-        manufacturers.append(line.strip())
+        manufacturers.append(line.strip().lower())
 
 models_set = set(models)
 manufacturers_set = set(manufacturers)
 
 
 def checker_model_manufacturer(text):
+    text = text.lower()
     isManufacturer = False
     isModel = False
     words = [remove_quotes_and_special_chars(x) for x in text.split() if len(x) > 3]

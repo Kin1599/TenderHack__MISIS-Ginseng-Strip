@@ -45,7 +45,7 @@ def type_prediction(text: dict):
         if 'model' in keys:
             response['model'] += parsed['model']
         if 'manufacturer' in keys:
-            response['manufacturer'] += parsed['manufacturer']
+            response['manufacturer'] += list(map(lambda x: x.capitalize(), parsed['manufacturer']))
     return response
 
 @app.post("/predict_category")
@@ -76,3 +76,8 @@ def generate_description(text: dict):
         if a != '':
             return {'text': a}
     return {'text': a}
+
+@app.post("/get_codes")
+def get_codes(text: dict):
+    response = requests.get('http://get_codes/get_pred', json=text).json()
+    return response
