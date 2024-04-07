@@ -31,8 +31,9 @@ def preprocess(text: dict):
 
     if response["text"] == 'Наименование должно состоять минимум из 3-x слов, длина наименования должна быть более 10 символов':
         response["text"] = 'Too short'
+    
     #{"text": "Toxic text"} Too short или обработанный
-    return response
+    return {"text": response["text"]}
 
 @app.post("/predict_type")
 def type_prediction(text: dict):
@@ -64,7 +65,7 @@ def get_fields(text: dict):
     for i in cats:
         if i not in response:
             response.append(i)
-    return cats
+    return response
 
 @app.post("/generate_description")
 def generate_description(text: dict):
@@ -74,10 +75,15 @@ def generate_description(text: dict):
         sleep(5)
         a = get_by_p(p)
         if a != '':
-            return {'text': a}
-    return {'text': a}
+            return {'text': a.replace('\n', ' ').replace('  ', ' ')}
+    return {'text': p}
 
 @app.post("/get_codes")
 def get_codes(text: dict):
     response = requests.get('http://get_codes/get_pred', json=text).json()
+    return response
+
+@app.post("/fill_characteristics")
+def fill_characteristics(text: dict):
+    response = requests.get('http://fill_characteristics/get_pred', json=text).json()
     return response

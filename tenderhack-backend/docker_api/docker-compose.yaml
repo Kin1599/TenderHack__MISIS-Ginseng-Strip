@@ -55,6 +55,14 @@ services:
       dockerfile: ../Dockerfile_clickhouse
     ports:
       - "8006:80"
+  fill_characteristics:
+    build:
+      context: fill_characteristics
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_clickhouse
+    ports:
+      - "8007:80"
   api:
     build:
       context: api

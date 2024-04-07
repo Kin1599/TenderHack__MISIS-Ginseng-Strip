@@ -1,6 +1,7 @@
 from typing import Union
 import characteristics_fields
 from fastapi import FastAPI
+import json
 
 app = FastAPI()
 
