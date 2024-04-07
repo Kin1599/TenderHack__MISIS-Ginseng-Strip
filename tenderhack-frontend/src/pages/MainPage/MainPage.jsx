@@ -51,22 +51,11 @@ function MainPage() {
 
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
+      console.log({fields})
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
-
-    useEffect(() => {
-      // Функция для загрузки полей по активной категории
-      const fetchFields = async () => {
-          if (category.length > 0 && activeCategoryIndex !== null) { 
-              const fields = await Server.getField(nameProduct); 
-              setFields(fields);
-          }
-      };
-
-      fetchFields(); 
-  }, [category, activeCategoryIndex]);
 
     const handleScroll = () => {
       const generalSection = document.getElementById('general');
