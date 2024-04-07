@@ -23,6 +23,7 @@ export default class SendServer {
         const data = { 'text': item }
         try {
             const response = await axios.post('http://localhost:8008/predict_type',data);
+            console.log(response.data)
             return response.data;
         } catch (error) {
             console.error('Error fetching data', error);
