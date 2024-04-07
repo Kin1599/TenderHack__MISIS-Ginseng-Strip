@@ -19,29 +19,20 @@ export default class SendServer {
         }
     }
 
-    static async predictType(item) {
-        try {
-            const response = await axios.get('http://localhost:8008/predict_type', {
-                data: { 'text': item },
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            return response.data;
-        } catch (error) {
-            console.error('Error fetching data', error);
+        static async predictType(item) {
+            const data = { 'text': item }
+            try {
+                const response = await axios.get('http://localhost:8008/predict_type', JSON=data);
+                return response.data;
+            } catch (error) {
+                console.error('Error fetching data', error);
+            }
         }
-    }
 
     static async preprocess(item) {
+        const data = { 'text': item }
         try {
-            const response = await axios.get("http://localhost:8008/preprocess",
-            {
-                data: { 'text': item },
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
+            const response = await axios.get("http://localhost:8008/preprocess",JSON=data);
             console.log(response.data);
             return response.data;
         } catch (error) {
@@ -50,14 +41,9 @@ export default class SendServer {
     }
 
     static async predictCategory(item) {
+        const data = { 'text': item }
         try {
-            const response = await axios.get("http://localhost:8008/predict_category",
-            {
-                data: { 'text': item },
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
+            const response = await axios.get("http://localhost:8008/predict_category",JSON=data);
             console.log(response.data);
             return response.data;
         } catch (error) {
@@ -66,14 +52,9 @@ export default class SendServer {
     }
 
     static async getField(category) {
+        const data = { category }
         try {
-            const response = await axios.get("http://localhost:8008/get_fields",
-            {
-                data: { category },
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
+            const response = await axios.get("http://localhost:8008/get_fields", JSON=data);
             console.log(response.data);
             return response.data;
         } catch (error) {
