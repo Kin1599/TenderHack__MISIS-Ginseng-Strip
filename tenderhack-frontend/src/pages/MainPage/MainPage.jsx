@@ -166,7 +166,6 @@ function MainPage() {
         <div className='btn' onClick={() => console.log(uploadedFiles)}>
           <BtnPreview onClick={() => setModal(true)}>Предварительный просмотр</BtnPreview>
         </div>
-        <h3>{category}</h3>
     </div>
   )
 }
