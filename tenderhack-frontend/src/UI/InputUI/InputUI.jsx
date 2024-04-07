@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import cl from "./InputUI.module.css"
 import Server from "../../api/Server"
 
-function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
+function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat, addText}) {
 
   const [isFocused, setIsFocused] = useState(false);
 
@@ -21,6 +21,7 @@ function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
     // Проверяем, что в поле есть текст
     if (event.target.value.trim()) {
       console.log("Textarea contains text and is not in focus");
+      addText()
       Server.preprocess(event.target.value) // Запрос на сервер
         .then((response) => {
           console.log(response['text'])

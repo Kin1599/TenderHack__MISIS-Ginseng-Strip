@@ -4,7 +4,7 @@ import GeneralInformation from '../../components/GeneralInformation/GeneralInfor
 import GeneralInformationWork from '../../components/GeneralInformationWork/GeneralInformationWork';
 
 
-function ProductForm({uploaded, item, setFields, activeCategory, activeModel, type}) {
+function ProductForm({uploaded, item, setFields, activeCategory, activeModel, activeManufacturer, type, setType}) {
   return (
     <div className='general'>
       {
@@ -16,7 +16,9 @@ function ProductForm({uploaded, item, setFields, activeCategory, activeModel, ty
           item={item} 
           setFields={setFields} 
           activeCategory={activeCategory} 
-          activeModel={activeModel}/>
+          activeModel={activeModel}
+          activeManufacturer={activeManufacturer}
+          setType={setType}/>
         </div>
         :
         <div>

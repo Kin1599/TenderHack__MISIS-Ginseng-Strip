@@ -2,7 +2,7 @@ import React from 'react'
 
 import cl from './BtnCategory.module.css'
 
-function BtnCategory({children, active}) {
+function BtnCategory({children, active, onClick}) {
 
     const rootClasses = [cl.btnCategory]
     if(active){
@@ -10,7 +10,7 @@ function BtnCategory({children, active}) {
     }
 
   return (
-    <a className={rootClasses.join(' ')}>{children}</a>
+    <a onClick={onClick} className={rootClasses.join(' ')}>{children}</a>
   )
 }
 

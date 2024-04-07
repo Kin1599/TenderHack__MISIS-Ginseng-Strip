@@ -21,6 +21,7 @@ function MainPage() {
     const [type, setType] = useState('');
     const [modal, setModal] = useState(false)
     const [manufacturer, setManufacturer] = useState(['']);
+    const [activeManufacturerIndex, setActiveManufacturerIndex] = useState(0)
     const [model, setModel] = useState(['']);
     const [activeModelIndex, setActiveModelIndex] = useState(0);
     const [fields, setFields] = useState([''])
@@ -170,7 +171,9 @@ function MainPage() {
           item={{model, manufacturer, category}} 
           activeCategory={{activeCategoryIndex, setActiveCategoryIndex}}
           activeModel={{activeModelIndex, setActiveModelIndex}}
+          activeManufacturer={{activeManufacturerIndex, setActiveManufacturerIndex}}
           type={type}
+          setType={setType}
           />
         </div>
         <div id='description'>

@@ -13,7 +13,10 @@ function Generation({description, descriptionGenerate}) {
     <div>
         <div className='description-top'>
           <h2 className='text-title description__title'>Описание</h2>
-          <BtnEdit onClick={() => setVisible(!visible)}>Сгенерировать описание</BtnEdit>
+          {
+            descriptionValueGenerate.length > 0 && (
+              <BtnEdit onClick={() => setVisible(!visible)}>Сгенерировать описание</BtnEdit>
+            )} 
         </div>
         {visible
         ?
