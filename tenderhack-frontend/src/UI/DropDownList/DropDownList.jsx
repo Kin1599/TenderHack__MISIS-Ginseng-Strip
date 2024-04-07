@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import cl from './DropDownList.module.css';
 
-function DropDownList({ activeCategory, category, setCategory, important, title }) {
-    const { activeCategoryIndex, setActiveCategoryIndex } = activeCategory;
+function DropDownList({ activeCategoryIndex, setActiveCategoryIndex, category, setCategory, important, title}) {
     const [newCategory, setNewCategory] = useState('');
     const [isAddingCategory, setIsAddingCategory] = useState(false);
 

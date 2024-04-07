@@ -16,13 +16,14 @@ import Server from '../../api/Server'
 function MainPage() {
 
     const [nameProduct, setNameProduct] = useState('');
-    const [category, setCategory] = useState(['ха', 'ло']);
+    const [category, setCategory] = useState(['']);
     const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [type, setType] = useState('');
     const [modal, setModal] = useState(false)
-    const [manufacturer, setManufacturer] = useState([]);
-    const [model, setModel] = useState([]);
-    const [fields, setFields] = useState([])
+    const [manufacturer, setManufacturer] = useState(['']);
+    const [model, setModel] = useState(['']);
+    const [activeModelIndex, setActiveModelIndex] = useState(0);
+    const [fields, setFields] = useState([''])
     const [characteristics, setCharacteristics] = useState([
       {'id': 0, 'title': 'Длина', 'value': '30', 'unit': 'см'},
       {'id': 1, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
@@ -153,7 +154,12 @@ function MainPage() {
         item = {{model, manufacturer, type, category}}
         />
         <div id='general'>
-          <ProductForm uploaded={{uploadedFiles, setUploadedFiles}} item={{model, manufacturer, category}} activeCategory={{activeCategoryIndex, setActiveCategoryIndex}}/>
+          <ProductForm 
+          uploaded={{uploadedFiles, setUploadedFiles}} 
+          item={{model, manufacturer, category}} 
+          activeCategory={{activeCategoryIndex, setActiveCategoryIndex}}
+          activeModel={{activeModelIndex, setActiveModelIndex}}
+          />
         </div>
         <div id='description'>
           <Description description={{descriptionValue, setDescriptionValue}}/>

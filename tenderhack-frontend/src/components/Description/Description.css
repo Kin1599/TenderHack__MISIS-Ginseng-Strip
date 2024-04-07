@@ -13,3 +13,13 @@
 .description:focus{
     background-color: #E1EDFF;
 }
+
+.description-top{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.description__title{
+    margin-top: 15px !important;
+}

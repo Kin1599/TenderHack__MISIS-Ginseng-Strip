@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 
 import './Description.css'
 import '../../App.css'
+import BtnEdit from '../../UI/BtnEdit/BtnEdit'
 
 function Generation({description}) {
   const {descriptionValue, setDescriptionValue} = description
 
   return (
     <div>
-        <h2 className='text-title'>Описание</h2>
+        <div className='description-top'>
+          <h2 className='text-title description__title'>Описание</h2>
+          <BtnEdit>Сгенерировать описание</BtnEdit>
+        </div>
         <textarea
           className='description'
           value={descriptionValue}
