@@ -1,0 +1,10 @@
+  description_generator:
+    build:
+      context: description_generator
+#      args:
+#        - FOLDER=type_prediction_models
+      dockerfile: ../Dockerfile_torch
+    ports:
+      - "8006:80"
+    volumes:
+     - /home/rdinit/description_models:/1

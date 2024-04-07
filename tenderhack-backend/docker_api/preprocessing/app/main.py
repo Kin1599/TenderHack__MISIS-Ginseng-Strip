@@ -10,7 +10,7 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/normalize")
+@app.get("/get_pred")
 def read_item(text: dict):
     response = preprocessing.normalize(text['text'])
     return {"text": response}
