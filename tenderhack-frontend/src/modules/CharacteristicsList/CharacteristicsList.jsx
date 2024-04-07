@@ -16,11 +16,11 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
     onUpdateCharacteristics(characteristicList);
   }, [characteristicList, onUpdateCharacteristics]);
 
-  function editing(){
+  function editing() {
     setIsEditing(true);
   }
 
-  function saving(){
+  function saving() {
     setIsSaving(true);
     setIsEditing(false);
   }
@@ -55,35 +55,35 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
           ? <BtnEdit width="142px" onClick={saving}>Ок</BtnEdit>
           : <BtnEdit width="142px" onClick={editing}>Изменить</BtnEdit>
         }
-      </div>  
+      </div>
 
       <div className='characteristicList'>
-      {Array.isArray(characteristicList) && characteristicList.length > 0 ? (
-        characteristicList.map((characteristic, index) => (
-          <CharacteristicItemEdit
-            key={index}
-            characteristic={characteristic}
-            isEditing={isEditing}
-            setIsEditing={setIsEditing}
-            updateCharacteristic={updateCharacteristic}
-            deleteCharacteristic={deleteCharacteristic} // Передача функции удаления
-            isSaving={isSaving}
-          />
-        ))
-      ) : (
-        <div>Список характеристик пуст</div>
-      )}
+        {Array.isArray(characteristicList) && characteristicList.length > 0 ? (
+          characteristicList.map((characteristic, index) => (
+            <CharacteristicItemEdit
+              key={index}
+              characteristic={characteristic}
+              isEditing={isEditing}
+              setIsEditing={setIsEditing}
+              updateCharacteristic={updateCharacteristic}
+              deleteCharacteristic={deleteCharacteristic} // Передача функции удаления
+              isSaving={isSaving}
+            />
+          ))
+        ) : (
+          <div>Список характеристик пуст</div>
+        )}
 
-        {isEditing && !showAddForm &&(
+        {isEditing && !showAddForm && (
           <div className='characteristicList__add'>
-            <img src={addIcon} alt="characteristicList__add" onClick={() => setShowAddForm(true)}/>
+            <img src={addIcon} alt="characteristicList__add" onClick={() => setShowAddForm(true)} />
           </div>
         )}
 
         {showAddForm && (
           <AddFormCharacteristicItem addCharacteristic={addCharacteristic} />
         )}
-        
+
       </div>
     </div>
   )
