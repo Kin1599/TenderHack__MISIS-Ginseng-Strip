@@ -23,13 +23,11 @@ function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
       console.log("Textarea contains text and is not in focus");
       Server.preprocess(event.target.value) // Запрос на сервер
         .then((response) => {
-          console.log(response, 'response')
-          console.log(response.data, 'response.data')
-          console.log(response['text2'], 'response["text2"]')
-          if (response === "Too short") {
+          console.log(response['text'])
+          if (response['text'] === "Too short") {
             setIsFormat('short')
             console.log("SHOOOOOOOOOOOOOOOOORT")
-          } else if (response === "Toxic text") {
+          } else if (response['text'] === "Toxic text") {
             setIsFormat('toxic')
           }
         })
