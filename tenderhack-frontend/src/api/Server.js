@@ -61,4 +61,15 @@ export default class SendServer {
             console.error(error);
         }
     }
+
+    static async generate_description(item){
+        const data = {"text": item}
+        try {
+            const response = await axios.post("http://localhost:8008/generate_description", data);
+            console.log(response.data);
+            return response.data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 }

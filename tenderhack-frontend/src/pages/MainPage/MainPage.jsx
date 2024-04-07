@@ -45,8 +45,9 @@ function MainPage() {
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [activeBtn, setActiveBtn] = useState(2);
     const [descriptionValue, setDescriptionValue] = useState('');
+    const [descriptionValueGenerate, setDescriptionValueGenerate] = useState('');
     const [activeBtnNavigation, setActiveBtnNavigation] = useState(1);
-    const [isFormat, setIsFormat] = useState('short');
+    const [isFormat, setIsFormat] = useState('');
 
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
@@ -92,6 +93,15 @@ function MainPage() {
     // Функция для обновления характеристик в родительском компоненте
     const updateCharacteristics = (updatedCharacteristics) => {
       setCharacteristics(updatedCharacteristics);
+    };
+
+    const generateDescriptionAndUpdateState = async (item) => {
+      try {
+        const generatedDescription = await Server.generate_description(item);
+        setDescriptionValueGenerate(generatedDescription);
+      } catch (error) {
+        console.error('Error generating description', error);
+      }
     };
 
   return (
@@ -150,7 +160,7 @@ function MainPage() {
         setIsFormat={setIsFormat}
         setNameProduct={setNameProduct} 
         nameProduct={nameProduct}
-        setItem={{setModel, setManufacturer, setType, setCategory, setFields}}
+        setItem={{setModel, setManufacturer, setType, setCategory, setFields, setDescriptionValueGenerate}}
         item = {{model, manufacturer, type, category}}
         attributes = {{model, manufacturer}}
         />
@@ -164,7 +174,9 @@ function MainPage() {
           />
         </div>
         <div id='description'>
-          <Description description={{descriptionValue, setDescriptionValue}}/>
+          <Description 
+          description={{descriptionValue, setDescriptionValue}} 
+          descriptionGenerate={{descriptionValueGenerate, setDescriptionValueGenerate}}/>
         </div>
         <div id='characteristics'>
           <CharacteristicsList 

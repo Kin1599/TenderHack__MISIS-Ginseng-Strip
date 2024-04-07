@@ -4,7 +4,7 @@ import cl from './BtnGenerate.module.css'
 import Server from '../../api/Server'
 
 function BtnGenerate({colorText, children, nameProduct, setItem}) {
-  const {setModel, setManufacturer, setType, setCategory, setFields} = setItem 
+  const {setModel, setManufacturer, setType, setCategory, setFields, setDescriptionValueGenerate} = setItem 
 
   const sendDataToServer = async () => {
     const response = await Server.predictType(nameProduct);
@@ -15,8 +15,9 @@ function BtnGenerate({colorText, children, nameProduct, setItem}) {
     setCategory(category)
     const fields = await Server.getField(category[0]);
     setFields(fields);
-    // setCategory(response)
     console.log(response);
+    const description = await Server.generate_description(nameProduct)
+    setDescriptionValueGenerate(description['text'])
   }
 
   return (
