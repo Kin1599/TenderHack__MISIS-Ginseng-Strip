@@ -175,7 +175,7 @@ function MainPage() {
         </div>
         <div id='characteristics'>
           <CharacteristicsList 
-          characteristics={fields}
+          characteristics={{fields, setFields}}
           onUpdateCharacteristics={updateCharacteristics}
           />
         </div>
