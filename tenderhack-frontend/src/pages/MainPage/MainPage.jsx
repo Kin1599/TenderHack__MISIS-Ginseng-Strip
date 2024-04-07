@@ -24,20 +24,7 @@ function MainPage() {
     const [activeManufacturerIndex, setActiveManufacturerIndex] = useState(0)
     const [model, setModel] = useState(['']);
     const [activeModelIndex, setActiveModelIndex] = useState(0);
-    const [fields, setFields] = useState([
-      {'id': 0, 'title': 'Длина', 'value': '30', 'unit': 'см'},
-      {'id': 1, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
-      {'id': 2, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
-      {'id': 3, 'title': 'Длина', 'value': '30', 'unit': 'см'},
-      {'id': 4, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
-      {'id': 5, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
-      {'id': 6, 'title': 'Длина', 'value': '30', 'unit': 'см'},
-      {'id': 7, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
-      {'id': 8, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
-      {'id': 9, 'title': 'Длина', 'value': '30', 'unit': 'см'},
-      {'id': 10, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
-      {'id': 11, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
-    ])
+    const [fields, setFields] = useState([''])
     const [classifications, setClassifications] = useState([
       {'title': 'Гост', 'value': '30', 'unit': 'см'},
       {'title': 'Ширина', 'value': '30', 'unit': 'см'},
