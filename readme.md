@@ -2,11 +2,11 @@
 
 Team Members:
 
-1) **Егор Чистов** @rdinit (Backend)
-2) **Кирилл Рыжичкин** @polnostju (ML)
-3) **Максим Литвинов** @ykmaksim (ML)
-4) **Дмитрий Коноплянников** @Kin1599 (Frontend)
-5) **Анна Гулякина** @anya_gulyakina (Design)
+1) **Егор Чистов (Backend)** @rdinit
+2) **Кирилл Рыжичкин (ML)** @polnostju
+3) **Максим Литвинов (ML)** @ykmaksim
+4) **Дмитрий Коноплянников (Frontend)** @Kin1599
+5) **Анна Гулякина (Design)** @anya_gulyakina
 
 Project Presentation: [Link](https://drive.google.com/...)
 
