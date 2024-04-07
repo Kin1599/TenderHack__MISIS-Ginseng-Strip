@@ -19,15 +19,15 @@ export default class SendServer {
         }
     }
 
-        static async predictType(item) {
-            const data = { 'text': item }
-            try {
-                const response = await axios.get('http://localhost:8008/predict_type', JSON=data);
-                return response.data;
-            } catch (error) {
-                console.error('Error fetching data', error);
-            }
+    static async predictType(item) {
+        const data = { 'text': item }
+        try {
+            const response = await axios.get('http://localhost:8008/predict_type', JSON=data);
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching data', error);
         }
+    }
 
     static async preprocess(item) {
         const data = { 'text': item }
