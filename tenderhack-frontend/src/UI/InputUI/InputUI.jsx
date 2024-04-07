@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import cl from "./InputUI.module.css"
 import Server from "../../api/Server"
 
-function InputUI({placeHolder, width, setNameProduct, isFormat}) {
+function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
 
   const [isFocused, setIsFocused] = useState(false);
 
@@ -22,8 +22,9 @@ function InputUI({placeHolder, width, setNameProduct, isFormat}) {
     if (event.target.value.trim()) {
       console.log("Textarea contains text and is not in focus");
       const response = Server.preprocess(event.target.value); // Запрос на сервер
-      console.log(response['text'])
-      if(response['text'] == "Too short"){
+      console.log(response.text)
+      if(response.text == "Too short"){
+        setIsFormat('short')
         console.log("SHOOOOOOOOOOOOOOOOORT")
       }
     }

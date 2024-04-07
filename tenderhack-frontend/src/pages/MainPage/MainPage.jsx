@@ -146,6 +146,7 @@ function MainPage() {
         </ModalProduct>
         <InputNameForm 
         isFormat={isFormat} 
+        setIsFormat={setIsFormat}
         setNameProduct={setNameProduct} 
         nameProduct={nameProduct}
         setItem={{setModel, setManufacturer, setType, setCategory, setFields}}

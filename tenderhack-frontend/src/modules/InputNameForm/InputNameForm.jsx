@@ -21,7 +21,12 @@ function InputNameForm({setNameProduct, isFormat, nameProduct, setItem}) {
 
   return (
     <div className='form'>
-        <InputUI isFormat={isFormat} width="100%" placeHolder="Введите наименование товара..." setNameProduct={setNameProduct}/>
+        <InputUI 
+        isFormat={isFormat} 
+        setIsFormat={setIsFormat}
+        width="100%" 
+        placeHolder="Введите наименование товара..." 
+        setNameProduct={setNameProduct}/>
         {isFormat === "typo" && (
           <div className='typoFormat'>
             <p className='typoFormat__title'>Возможно вы имели ввиду:</p>
