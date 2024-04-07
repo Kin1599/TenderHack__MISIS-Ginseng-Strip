@@ -3,11 +3,16 @@ import cl from './BtnGenerate.module.css'
 
 import Server from '../../api/Server'
 
-function BtnGenerate({colorText, children, nameProduct, setCategory}) {
+function BtnGenerate({colorText, children, nameProduct, item, setFields}) {
+  const {setModel, setManufacturer, setType, setCategory} = item 
 
   const sendDataToServer = async () => {
-    const response = await Server.sendDataToServer({nameItem: nameProduct})
-    setCategory(response.nameItem)
+    const response = await Server.predictType({"text": nameProduct});
+    const category = await Server.predictCategory({"text": nameProduct});;
+    const fields = await Server.getField(category);
+    setFields(fields);
+    // setCategory(response)
+    console.log(response);
   }
 
   return (

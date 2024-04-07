@@ -3,7 +3,7 @@ import React from 'react'
 import cl from './InputProduct.module.css'
 import '../../App.css'
 
-function InputProduct({title, important}) {
+function InputProduct({title, important, value}) {
 
   const rootClasses = ['gray-text__title']
   if (important){
@@ -13,7 +13,7 @@ function InputProduct({title, important}) {
   return (
     <div>
         <h3 className={rootClasses.join(' ')}>{title}</h3>
-        <input className={cl.inputProduct}/>
+        <input className={cl.inputProduct} value={value}/>
     </div>
   )
 }

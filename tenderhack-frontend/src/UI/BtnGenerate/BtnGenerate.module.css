@@ -6,10 +6,12 @@
     background-color: #224780;
     cursor: pointer;
     color: #fff;
+    border: none;
 }
 
 .btnGenerate:disabled{
     cursor:auto;
+    background-color: #798495;
 }
 
 .btnGenerate:hover{

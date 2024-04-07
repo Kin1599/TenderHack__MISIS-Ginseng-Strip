@@ -17,7 +17,7 @@ def preprocess(text: dict):
     if response["text"] == 'Наименование должно состоять минимум из 3-x слов, длина наименования должна быть более 10 символов':
         response["text"] = 'Too short'
     #{"text": "Toxic text"} Too short или обработанный
-    
+   
     return response
 
 @app.get("/predict_type")

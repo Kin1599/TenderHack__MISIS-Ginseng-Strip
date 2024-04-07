@@ -6,7 +6,8 @@ import './styles/GeneralInformation.css'
 import '../../App.css'
 import BtnCategory from '../../UI/BtnCategory/BtnCategory';
 
-function GeneralInformation({uploaded}) {
+function GeneralInformation({uploaded, item}) {
+  const {model, manufacturer, category} = item
   return (
     <div className='general-information__wrapper'>
         <h2 className='text-title'>Общие сведения</h2>
@@ -23,10 +24,10 @@ function GeneralInformation({uploaded}) {
                 </div>
               </div>
               <div className='general-information__items'>
-                  <InputProduct title="Вид продукции" important={true}/>
+                  <InputProduct title="Вид продукции" important={true} value={category}/>
                   <InputProduct title="Наименование" important={true}/>
-                  <InputProduct title="Модель" important={true}/>
-                  <InputProduct title="Производитель" important={true}/>
+                  <InputProduct title="Модель" important={true} value={model}/>
+                  <InputProduct title="Производитель" important={true} value={manufacturer}/>
                   <InputProduct title="Страна происхождения" important={true}/>
                   <div className='line'/>
               </div>
