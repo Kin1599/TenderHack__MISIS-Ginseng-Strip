@@ -15,7 +15,7 @@ function BtnGenerate({colorText, children, nameProduct, setItem}) {
     setCategory(category)
     const field = await Server.getField(nameProduct);
     console.log("ААААА")
-    console.log({field})
+    console.log(field)
     setCharacteristics(field);
     console.log(response);
     const description = await Server.generate_description(nameProduct)
