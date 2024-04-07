@@ -24,6 +24,8 @@ function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
       const response = Server.preprocess(event.target.value); // Запрос на сервер
       console.log("AAA")
       console.log(response)
+      console.log(response.text)
+      console.log(response['text'])
       if(response === "Too short"){
         setIsFormat('short')
         console.log("SHOOOOOOOOOOOOOOOOORT")

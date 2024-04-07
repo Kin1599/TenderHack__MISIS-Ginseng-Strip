@@ -7,7 +7,7 @@ import './styles/InputNameForm.css'
 
 import Yandex from '../../api/Yandex'
 
-function InputNameForm({setNameProduct, isFormat, nameProduct, setItem}) {
+function InputNameForm({setNameProduct, isFormat, setIsFormat, nameProduct, setItem}) {
 
   const [isHovered, setIsHovered] = useState(false);
 

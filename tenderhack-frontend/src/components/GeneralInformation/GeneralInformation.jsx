@@ -34,8 +34,9 @@ function GeneralInformation({uploaded, item, activeCategory}) {
                       : <InputProduct title="Вид продукции" important={true} value={category[activeCategoryIndex]}/>
                     }
                   </div>
-                  
-                  <InputProduct title="Наименование" important={true}/>
+                  <div>
+                    
+                  </div>
                   <InputProduct title="Модель" important={true} value={model}/>
                   <InputProduct title="Производитель" important={true} value={manufacturer}/>
                   <InputProduct title="Страна происхождения" important={true}/>
