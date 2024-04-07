@@ -5,9 +5,12 @@ import InputProduct from '../../UI/InputProduct/InputProduct';
 import './styles/GeneralInformation.css'
 import '../../App.css'
 import BtnCategory from '../../UI/BtnCategory/BtnCategory';
+import DropDownList from '../../UI/DropDownList/DropDownList';
 
-function GeneralInformation({uploaded, item}) {
+function GeneralInformation({uploaded, item, activeCategory}) {
   const {model, manufacturer, category} = item
+  const {activeCategoryIndex, setActiveCategoryIndex} = activeCategory
+
   return (
     <div className='general-information__wrapper'>
         <h2 className='text-title'>Общие сведения</h2>
@@ -24,7 +27,14 @@ function GeneralInformation({uploaded, item}) {
                 </div>
               </div>
               <div className='general-information__items'>
-                  <InputProduct title="Вид продукции" important={true} value={category}/>
+                  <div>
+                    {
+                      category.length > 1
+                      ? <DropDownList activeCategory={{activeCategoryIndex, setActiveCategoryIndex}} category={category} title='Вид продукции' important={true}/> 
+                      : <InputProduct title="Вид продукции" important={true} value={category[activeCategoryIndex]}/>
+                    }
+                  </div>
+                  
                   <InputProduct title="Наименование" important={true}/>
                   <InputProduct title="Модель" important={true} value={model}/>
                   <InputProduct title="Производитель" important={true} value={manufacturer}/>

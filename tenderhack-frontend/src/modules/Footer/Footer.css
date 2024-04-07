@@ -2,10 +2,22 @@
     display: flex;
     justify-content: flex-end;
     gap: 28px;
-    padding: 0 47px 43px 0;
 }
 
 .footer__icons img{
     width: 45px;
     height: 55px;
+}
+
+.footer__team{
+    font-size: 30px;
+    font-weight: 600;
+    color: #3E3E3E;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 48px;
 }

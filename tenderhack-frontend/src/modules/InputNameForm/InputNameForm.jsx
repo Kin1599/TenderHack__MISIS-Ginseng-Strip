@@ -7,7 +7,7 @@ import './styles/InputNameForm.css'
 
 import Yandex from '../../api/Yandex'
 
-function InputNameForm({setNameProduct, isFormat, nameProduct, item, setFields}) {
+function InputNameForm({setNameProduct, isFormat, nameProduct, setItem}) {
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -41,7 +41,7 @@ function InputNameForm({setNameProduct, isFormat, nameProduct, item, setFields})
           <div className='toxicFormat'>Кажется ваше сообщение не является полным наименованием товара!Попробуйте ввести другой текст.</div>
         )}
         <div className='form__btn'>
-            <BtnGenerate nameProduct={nameProduct} item={item} setFields={setFields}>Автозаполнение</BtnGenerate>
+            <BtnGenerate nameProduct={nameProduct} setItem={setItem}>Автозаполнение</BtnGenerate>
         </div>
       </div>
   )

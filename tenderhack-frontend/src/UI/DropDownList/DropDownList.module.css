@@ -1,0 +1,18 @@
+.categorySelect{
+    background-color: #EFF5FF;
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    padding: 11px 18px;
+}
+
+.dropDownList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropDownList__title{
+    font-size: 17px;
+    color: 787878;
+}

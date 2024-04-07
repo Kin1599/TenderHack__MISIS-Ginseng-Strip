@@ -7,6 +7,7 @@ import './Footer.css'
 function Footer() {
   return (
     <div className='footer'>
+        <div className='footer__team'>MISIS Ginseng Strip</div>
         <div className='footer__icons'>
             <img src={logoFooter} alt="logoFooter" />
             <img src={logoFooter2} alt="logoFooter2" />

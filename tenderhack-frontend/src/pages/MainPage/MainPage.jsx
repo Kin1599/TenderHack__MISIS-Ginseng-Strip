@@ -11,11 +11,13 @@ import CharacteristicItem from '../../components/CharacteristicItem/Characterist
 import CharacteristicsList from '../../modules/CharacteristicsList/CharacteristicsList';
 import DescriptionItem from '../../components/DescriptionItem/DescriptionItem';
 import BtnNavigation from '../../UI/BtnNavigation/BtnNavigation';
+import Server from '../../api/Server'
 
 function MainPage() {
 
     const [nameProduct, setNameProduct] = useState('');
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState(['ха', 'ло']);
+    const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [type, setType] = useState('');
     const [modal, setModal] = useState(false)
     const [manufacturer, setManufacturer] = useState([]);
@@ -52,6 +54,18 @@ function MainPage() {
       };
     }, []);
 
+    useEffect(() => {
+      // Функция для загрузки полей по активной категории
+      const fetchFields = async () => {
+          if (category.length > 0 && activeCategoryIndex !== null) { 
+              const fields = await Server.getField(category[activeCategoryIndex]); 
+              setFields(fields);
+          }
+      };
+
+      fetchFields(); 
+  }, [category, activeCategoryIndex]);
+
     const handleScroll = () => {
       const generalSection = document.getElementById('general');
       const descriptionSection = document.getElementById('description');
@@ -81,11 +95,11 @@ function MainPage() {
 
   return (
     <div className="_container">
-      <div className='navigation__btns'>
+      {/* <div className='navigation__btns'>
         <BtnNavigation href="#general" active={activeBtnNavigation === 1} onClick={() => setActiveBtnNavigation(1)}>Общие сведения</BtnNavigation>
         <BtnNavigation href="#description" active={activeBtnNavigation === 2} onClick={() => setActiveBtnNavigation(2)}>Описание</BtnNavigation>
         <BtnNavigation href="#characteristics" active={activeBtnNavigation === 3} onClick={() => setActiveBtnNavigation(3)}>Характеристики</BtnNavigation>
-      </div>
+      </div> */}
         <ModalProduct visible={modal} setVisible={setModal}>
           <div className='main-info__wrapper'>
             <div className='main-info'>
@@ -97,8 +111,8 @@ function MainPage() {
                     ? <div className='main-info__title'>{nameProduct}</div>
                     : <div className='main-info__title'>Название товара</div>
                   }
-                  <div className='main-info__model'>Модель: </div>
-                  <div className='main-info__producer'>Производитель: </div>
+                  <div className='main-info__model'>Модель: {model}</div>
+                  <div className='main-info__producer'>Производитель: {manufacturer}</div>
                 </div>
               </div>
             </div>
@@ -134,11 +148,11 @@ function MainPage() {
         isFormat={isFormat} 
         setNameProduct={setNameProduct} 
         nameProduct={nameProduct}
-        item={{setModel, setManufacturer, setType, setCategory}}
-        setFields={setFields}
+        setItem={{setModel, setManufacturer, setType, setCategory, setFields}}
+        item = {{model, manufacturer, type, category}}
         />
         <div id='general'>
-          <ProductForm uploaded={{uploadedFiles, setUploadedFiles}} item={{model, manufacturer, category}}/>
+          <ProductForm uploaded={{uploadedFiles, setUploadedFiles}} item={{model, manufacturer, category}} activeCategory={{activeCategoryIndex, setActiveCategoryIndex}}/>
         </div>
         <div id='description'>
           <Description description={{descriptionValue, setDescriptionValue}}/>
