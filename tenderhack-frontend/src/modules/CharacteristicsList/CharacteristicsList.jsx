@@ -25,14 +25,11 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
     setIsEditing(false);
   }
 
-  // Функция обновления характеристики
-  function updateCharacteristic(id, updatedCharacteristic) {
-    setCharacteristicList(prevList =>
-      prevList.map(char =>
-        char.id === id ? updatedCharacteristic : char
-      )
-    );
-  }
+  // Функция добавления новой характеристики
+  const addCharacteristic = (newCharacteristic) => {
+    setCharacteristicList([...characteristicList, newCharacteristic]);
+    setShowAddForm(false); // Скрыть форму после добавления
+  };
 
   // Функция удаления характеристики
   const deleteCharacteristic = (id) => {
@@ -41,10 +38,13 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
     ));
   };
 
-  // Функция добавления новой характеристики
-  const addCharacteristic = (newCharacteristic) => {
-    setCharacteristicList(prevList => [...prevList, newCharacteristic]);
-    setShowAddForm(false); // Скрыть форму после добавления
+  // Функция обновления характеристики
+  const updateCharacteristic = (id, updatedCharacteristic) => {
+    setCharacteristicList(prevList => (
+      prevList.map(char =>
+        char.id === id ? updatedCharacteristic : char
+      )
+    ));
   };
 
   return (
@@ -58,7 +58,7 @@ function CharacteristicsList({ characteristics, onUpdateCharacteristics }) {
       </div>
 
       <div className='characteristicList'>
-        {Array.isArray(characteristicList) && characteristicList.length > 0 ? (
+        {characteristicList.length > 0 ? (
           characteristicList.map((characteristic, index) => (
             <CharacteristicItemEdit
               key={index}
