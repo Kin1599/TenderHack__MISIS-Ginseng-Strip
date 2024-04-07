@@ -26,7 +26,6 @@ function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
           console.log(response['text'])
           if (response['text'] === "Too short") {
             setIsFormat('short')
-            console.log("SHOOOOOOOOOOOOOOOOORT")
           } else if (response['text'] === "Toxic text") {
             setIsFormat('toxic')
           }
@@ -44,6 +43,8 @@ function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
     rootClasses.push(cl.toxic);
   } else if(isFormat === "typo"){
     rootClasses.push(cl.typo);
+  } else if(isFormat === "short"){
+    rootClasses.push(cl.warning)
   }
 
   return (

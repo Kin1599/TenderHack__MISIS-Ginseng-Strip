@@ -29,3 +29,7 @@
 .input.typo{
     border: 1px solid #226EE3;
 }
+
+.input.warning{
+    border: 1px solid #E48311;
+}

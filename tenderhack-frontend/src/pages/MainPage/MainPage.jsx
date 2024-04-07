@@ -46,7 +46,7 @@ function MainPage() {
     const [activeBtn, setActiveBtn] = useState(2);
     const [descriptionValue, setDescriptionValue] = useState('');
     const [activeBtnNavigation, setActiveBtnNavigation] = useState(1);
-    const [isFormat, setIsFormat] = useState(' ');
+    const [isFormat, setIsFormat] = useState('short');
 
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
@@ -152,6 +152,7 @@ function MainPage() {
         nameProduct={nameProduct}
         setItem={{setModel, setManufacturer, setType, setCategory, setFields}}
         item = {{model, manufacturer, type, category}}
+        attributes = {{model, manufacturer}}
         />
         <div id='general'>
           <ProductForm 

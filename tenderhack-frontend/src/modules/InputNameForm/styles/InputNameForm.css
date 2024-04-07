@@ -44,6 +44,12 @@
     margin: 9px 0 0 5px;
 }
 
+.warningFormat{
+    color: #E48311;
+    width: 494px;
+    margin: 9px 0 0 5px;
+}
+
 .typoFormat{
     border: 1px solid #226EE3;
     border-radius: 5px;
