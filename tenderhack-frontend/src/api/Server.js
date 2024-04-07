@@ -22,7 +22,7 @@ export default class SendServer {
     static async predictType(item) {
         const data = { 'text': item }
         try {
-            const response = await axios.get('http://localhost:8008/predict_type',data);
+            const response = await axios.post('http://localhost:8008/predict_type',data);
             return response.data;
         } catch (error) {
             console.error('Error fetching data', error);
@@ -32,7 +32,7 @@ export default class SendServer {
     static async preprocess(item) {
         const data = { 'text': item }
         try {
-            const response = await axios.get("http://localhost:8008/preprocess",data);
+            const response = await axios.post("http://localhost:8008/preprocess",data);
             console.log(response.data);
             return response.data;
         } catch (error) {
@@ -43,7 +43,7 @@ export default class SendServer {
     static async predictCategory(item) {
         const data = { 'text': item }
         try {
-            const response = await axios.get("http://localhost:8008/predict_category",data);
+            const response = await axios.post("http://localhost:8008/predict_category",data);
             console.log(response.data);
             return response.data;
         } catch (error) {
@@ -54,7 +54,7 @@ export default class SendServer {
     static async getField(category) {
         const data = { category }
         try {
-            const response = await axios.get("http://localhost:8008/get_fields",data);
+            const response = await axios.post("http://localhost:8008/get_fields",data);
             console.log(response.data);
             return response.data;
         } catch (error) {
