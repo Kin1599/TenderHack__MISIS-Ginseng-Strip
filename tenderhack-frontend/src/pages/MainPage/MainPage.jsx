@@ -159,6 +159,7 @@ function MainPage() {
           item={{model, manufacturer, category}} 
           activeCategory={{activeCategoryIndex, setActiveCategoryIndex}}
           activeModel={{activeModelIndex, setActiveModelIndex}}
+          type={type}
           />
         </div>
         <div id='description'>
