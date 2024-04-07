@@ -84,7 +84,7 @@ function MainPage() {
 
     // Функция для обновления характеристик в родительском компоненте
     const updateCharacteristics = (updatedCharacteristics) => {
-      setCharacteristics(updatedCharacteristics);
+      setCharacteristics([...updatedCharacteristics]);
     };
 
     const generateDescriptionAndUpdateState = async (item) => {
