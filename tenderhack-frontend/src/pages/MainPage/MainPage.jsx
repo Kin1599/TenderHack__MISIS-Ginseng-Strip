@@ -60,7 +60,7 @@ function MainPage() {
       // Функция для загрузки полей по активной категории
       const fetchFields = async () => {
           if (category.length > 0 && activeCategoryIndex !== null) { 
-              const fields = await Server.getField(category[activeCategoryIndex]); 
+              const fields = await Server.getField(nameProduct); 
               setFields(fields);
           }
       };
