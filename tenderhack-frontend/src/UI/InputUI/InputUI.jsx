@@ -23,7 +23,7 @@ function InputUI({placeHolder, width, setNameProduct, isFormat, setIsFormat}) {
       console.log("Textarea contains text and is not in focus");
       const response = Server.preprocess(event.target.value); // Запрос на сервер
       console.log("AAA")
-      console.log(response)
+      console.log(response.data)
       console.log(response['value'])
       console.log(response.value)
       if(response === "Too short"){
