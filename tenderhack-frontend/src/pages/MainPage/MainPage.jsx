@@ -24,8 +24,7 @@ function MainPage() {
     const [activeManufacturerIndex, setActiveManufacturerIndex] = useState(0)
     const [model, setModel] = useState(['']);
     const [activeModelIndex, setActiveModelIndex] = useState(0);
-    const [fields, setFields] = useState([''])
-    const [characteristics, setCharacteristics] = useState([
+    const [fields, setFields] = useState([
       {'id': 0, 'title': 'Длина', 'value': '30', 'unit': 'см'},
       {'id': 1, 'title': 'Ширина', 'value': '30', 'unit': 'см'},
       {'id': 2, 'title': 'Материал', 'value': 'Железо', 'unit': ''},
@@ -93,7 +92,7 @@ function MainPage() {
 
     // Функция для обновления характеристик в родительском компоненте
     const updateCharacteristics = (updatedCharacteristics) => {
-      setCharacteristics(updatedCharacteristics);
+      setFields(updatedCharacteristics);
     };
 
     const generateDescriptionAndUpdateState = async (item) => {
@@ -141,11 +140,15 @@ function MainPage() {
               )}
               {activeBtn === 2 && (
                 <div className='choices__characteristics'>
-                  {characteristics.map((characteristic, index) => (
-                    <div>
-                      <CharacteristicItem key={index} characteristic={characteristic} />
+                {Array.isArray(fields) ? (
+                  fields.map((characteristic, index) => (
+                    <div key={index}>
+                      <CharacteristicItem characteristic={characteristic} />
                     </div>
-                  ))}
+                  ))
+                ) : (
+                  <div>Список характеристик не загружен</div>
+                )}
                 </div>
               )}
               {activeBtn === 3 && (
@@ -183,7 +186,7 @@ function MainPage() {
         </div>
         <div id='characteristics'>
           <CharacteristicsList 
-          characteristics={characteristics}
+          characteristics={fields}
           onUpdateCharacteristics={updateCharacteristics}
           />
         </div>
