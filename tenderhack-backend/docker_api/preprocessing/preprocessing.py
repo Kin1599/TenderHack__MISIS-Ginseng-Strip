@@ -17,14 +17,14 @@ model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME).to(device)
 
 
 def normal_length(text):
-    if len(text) <= 10 or len(text.split()) < 3:
+    if len(text) <= 5 or len(text.split()) < 2:
         return False
     return True
 
 
 def normalize(text):
     if not normal_length(text):
-        return 'Наименование должно состоять минимум из 3-x слов, длина наименования должна быть более 10 символов'
+        return 'Наименование должно состоять минимум из 2-x слов, длина наименования должна быть более 5 символов'
     is_toxic = classifier.predict(text)[0]
     if is_toxic:
         return 'Toxic text'
